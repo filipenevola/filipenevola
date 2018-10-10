@@ -1,0 +1,11 @@
+node_modules
+.next
+
+package-lock.json
+*.log
+
+**/.idea/*
+!.idea/workspace.cp.xml
+!.idea/codeStyleSettings.xml
+!.idea/encodings.xml
+!.idea/runConfigurations
