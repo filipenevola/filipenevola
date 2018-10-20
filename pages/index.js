@@ -7,8 +7,7 @@ const TEXT = {
   en: {
     intro: key => (
       <p key={key}>
-        Trying to follow Jesus' footsteps, in love with my wife, Developer &
-        Instructor, Working for{" "}
+        Developer & Instructor trying to be better every day, Working for{" "}
         <a href="https://twitter.com/Pathable">Pathable</a>, founder of{" "}
         <a href="https://twitter.com/FTW_Code">CodeFTW</a> &{" "}
         <a href="https://twitter.com/QuaveTI">Quave</a>. Enthusiast of{" "}
@@ -19,9 +18,8 @@ const TEXT = {
   pt: {
     intro: key => (
       <p key={key}>
-        Tentando seguir os passos de Jesus, apaixonado pela minha esposa,
-        Desenvolvedor e Instrutor, Trabalhando para a{" "}
-        <a href="https://twitter.com/Pathable">Pathable</a>, fundador do
+        Desenvolvedor e Instrutor tentando ser melhor todos os dias, Trabalhando
+        para a <a href="https://twitter.com/Pathable">Pathable</a>, fundador do
         <a href="https://twitter.com/FTW_Code">CodeFTW</a> e{" "}
         <a href="https://twitter.com/QuaveTI">Quave</a>. Entusiata de{" "}
         <a href="https://twitter.com/meteorjs">MeteorJS</a>
