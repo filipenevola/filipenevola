@@ -11,7 +11,7 @@ const TEXT = {
         <a href="https://twitter.com/Pathable">Pathable</a>, founder of{" "}
         <a href="https://twitter.com/FTW_Code">CodeFTW</a> &{" "}
         <a href="https://twitter.com/QuaveTI">Quave</a>. Enthusiast of{" "}
-        <a href="https://twitter.com/meteorjs">MeteorJS</a>
+        <a href="https://twitter.com/reactjs">ReactJS</a> and <a href="https://twitter.com/meteorjs">MeteorJS</a>
       </p>
     )
   },
@@ -22,7 +22,7 @@ const TEXT = {
         para a <a href="https://twitter.com/Pathable">Pathable</a>, fundador do
         <a href="https://twitter.com/FTW_Code">CodeFTW</a> e{" "}
         <a href="https://twitter.com/QuaveTI">Quave</a>. Entusiata de{" "}
-        <a href="https://twitter.com/meteorjs">MeteorJS</a>
+        <a href="https://twitter.com/reactjs">ReactJS</a> e <a href="https://twitter.com/meteorjs">MeteorJS</a>
       </p>
     )
   }
