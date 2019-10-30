@@ -4,7 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { Menu } from "./menu";
 import * as PropTypes from "prop-types";
-import { withRouter } from "next/dist/lib/router";
+import { withRouter } from "next/router";
 import { Mailchimp } from "./mailchimp";
 
 export const PAGES_TEXT = {
