@@ -7,22 +7,23 @@ const TEXT = {
   en: {
     intro: key => (
       <p key={key}>
-        Developer & Instructor trying to be better every day, Working for{" "}
-        <a href="https://twitter.com/Pathable">Pathable</a>, founder of{" "}
+        <a href="https://twitter.com/meteorjs">Meteor</a> Evangelist, Developer
+        & Instructor trying to be better every day, founder of{" "}
         <a href="https://twitter.com/FTW_Code">CodeFTW</a> &{" "}
-        <a href="https://twitter.com/QuaveTI">Quave</a>. Enthusiast of{" "}
-        <a href="https://twitter.com/reactjs">ReactJS</a> and <a href="https://twitter.com/meteorjs">MeteorJS</a>
+        <a href="https://twitter.com/quaveDev">Quave</a>,{" "}
+        <a href="https://twitter.com/Pathable">Pathable</a>
+        's Contractor
       </p>
     )
   },
   pt: {
     intro: key => (
       <p key={key}>
-        Desenvolvedor e Instrutor tentando ser melhor todos os dias, Trabalhando
-        para a <a href="https://twitter.com/Pathable">Pathable</a>, fundador do
-        <a href="https://twitter.com/FTW_Code">CodeFTW</a> e{" "}
-        <a href="https://twitter.com/QuaveTI">Quave</a>. Entusiata de{" "}
-        <a href="https://twitter.com/reactjs">ReactJS</a> e <a href="https://twitter.com/meteorjs">MeteorJS</a>
+        Evangelista do <a href="https://twitter.com/meteorjs">Meteor</a>,
+        Desenvolvedor e Instrutor tentando ser melhor todos os dias, fundador do{" "}
+        <a href="https://twitter.com/FTW_Code">CodeFTW</a> &{" "}
+        <a href="https://twitter.com/quaveDev">Quave</a>, Trabalhando pra{" "}
+        <a href="https://twitter.com/Pathable">Pathable</a>
       </p>
     )
   }
