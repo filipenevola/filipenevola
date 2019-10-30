@@ -6,6 +6,7 @@ import { Menu } from "./menu";
 import * as PropTypes from "prop-types";
 import { withRouter } from "next/router";
 import { Mailchimp } from "./mailchimp";
+import { initGA, logEvent, logPageView } from "../utils/analytics";
 
 export const PAGES_TEXT = {
   en: {
@@ -38,15 +39,30 @@ class LayoutComponent extends Component {
     language: "en"
   };
 
+  componentDidMount() {
+    if (!window.GA_INITIALIZED) {
+      initGA();
+      window.GA_INITIALIZED = true;
+    }
+    logPageView();
+  }
+
   toggleMenu = () =>
     this.setState(({ menuOpened }) => {
       return { menuOpened: !menuOpened };
     });
 
-  toggleLanguage = () =>
-    this.setState(({ language }) => {
-      return { language: language === "en" ? "pt" : "en" };
+  toggleLanguage = () => {
+    return this.setState(({ language }) => {
+      const newLanguage = language === "en" ? "pt" : "en";
+      logEvent({
+        category: "Navigation",
+        action: "Change Language",
+        label: newLanguage
+      });
+      return { language: newLanguage };
     });
+  };
 
   render() {
     let { children, title, router } = this.props;
