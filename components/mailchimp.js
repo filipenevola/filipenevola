@@ -28,7 +28,7 @@ export const Mailchimp = ({ language }) => (
         <a href="http://fb.com/filipenevoladev">
           Facebook
         </a>{' '}|{' '}
-        <a href="https://www.youtube.com/channel/UC8A0hHUaCBvuBs0eA5g_q3A">
+        <a href="https://www.youtube.com/c/HowToCreateAnAppDev">
           Youtube
         </a>
 
