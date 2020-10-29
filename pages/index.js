@@ -7,23 +7,22 @@ const TEXT = {
   en: {
     intro: key => (
       <p key={key}>
+        Subscribe to my channel <a href="https://www.youtube.com/c/HowToCreateAnAppDev">"How to create an app"</a>: Every day a new video.{" "}
         <a href="https://twitter.com/meteorjs">Meteor</a> Evangelist, Developer
         & Instructor trying to be better every day, founder of{" "}
         <a href="https://twitter.com/FTW_Code">CodeFTW</a> &{" "}
-        <a href="https://twitter.com/quaveDev">Quave</a>,{" "}
-        <a href="https://twitter.com/Pathable">Pathable</a>
-        's Contractor
+        <a href="https://twitter.com/quaveDev">Quave</a>.
       </p>
     )
   },
   pt: {
     intro: key => (
       <p key={key}>
+        Se inscreva no meu canal <a href="https://www.youtube.com/c/HowToCreateAnAppDev">"How to create an app"</a>: Todo dia um vídeo novo.{" "}
         Evangelista do <a href="https://twitter.com/meteorjs">Meteor</a>,
         Desenvolvedor e Instrutor tentando ser melhor todos os dias, fundador do{" "}
         <a href="https://twitter.com/FTW_Code">CodeFTW</a> &{" "}
-        <a href="https://twitter.com/quaveDev">Quave</a>, Trabalhando pra{" "}
-        <a href="https://twitter.com/Pathable">Pathable</a>
+        <a href="https://twitter.com/quaveDev">Quave</a>.
       </p>
     )
   }
