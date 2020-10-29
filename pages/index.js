@@ -7,7 +7,7 @@ const TEXT = {
   en: {
     intro: key => (
       <p key={key}>
-        Subscribe to my channel <a href="https://www.youtube.com/c/HowToCreateAnAppDev">"How to create an app"</a>: Every day a new video.{" "}
+        Subscribe to my channel <a href="https://www.youtube.com/c/HowToCreateAnAppDev">"How to create an app"</a>: Every day a new video.<br/><br/>
         <a href="https://twitter.com/meteorjs">Meteor</a> Evangelist, Developer
         & Instructor trying to be better every day, founder of{" "}
         <a href="https://twitter.com/FTW_Code">CodeFTW</a> &{" "}
@@ -18,7 +18,7 @@ const TEXT = {
   pt: {
     intro: key => (
       <p key={key}>
-        Se inscreva no meu canal <a href="https://www.youtube.com/c/HowToCreateAnAppDev">"How to create an app"</a>: Todo dia um vídeo novo.{" "}
+        Se inscreva no meu canal <a href="https://www.youtube.com/c/HowToCreateAnAppDev">"How to create an app"</a>: Todo dia um vídeo novo.<br/><br/>
         Evangelista do <a href="https://twitter.com/meteorjs">Meteor</a>,
         Desenvolvedor e Instrutor tentando ser melhor todos os dias, fundador do{" "}
         <a href="https://twitter.com/FTW_Code">CodeFTW</a> &{" "}
