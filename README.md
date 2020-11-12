@@ -1,46 +1,17 @@
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/zeit/next.js/tree/master/examples/basic-css)
+### Hi / Olá 👋
 
-# Basic CSS example
+I'm Filipe Névola, and I'm @MeteorJS Evangelist, Developer & Instructor trying to be better every day.
 
-## How to use
+[Subscribe](https://www.youtube.com/c/HowToCreateAnAppDev) to my channel "How to create an app": Every day a new video.
 
-### Using `create-next-app`
+[![Twitter Follow](https://img.shields.io/twitter/follow/FilipeNevola?style=social)](https://twitter.com/FilipeNevola)
 
-Execute [`create-next-app`](https://github.com/segmentio/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
+[![Linkedin: FilipeNevola](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/FilipeNevola/)](https://www.linkedin.com/in/loiane/)
 
-```bash
-npx create-next-app --example basic-css basic-css-app
-# or
-yarn create next-app --example basic-css basic-css-app
-```
+[![Youtube: HowToCreateAnApp](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/c/HowToCreateAnAppDev)](https://www.youtube.com/c/HowToCreateAnAppDev) (English)
 
-### Download manually
+[![Youtube: ComoCriarUmApp](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA)](https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA) (Portuguese)
 
-Download the example:
+[Instagram](https://www.instagram.com/filipenevola/)
 
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/basic-css
-cd basic-css
-```
-
-Install it and run:
-
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
-```
-
-Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
-
-```bash
-now
-```
-
-## The idea behind the example
-
-Next.js ships with [styled-jsx](https://github.com/zeit/styled-jsx) allowing you
-to write scope styled components with full css support. This is important for
-the modularity and code size of your bundles and also for the learning curve of the framework. If you know css you can write styled-jsx right away.
+[Website](https://www.filipenevola.com/)
