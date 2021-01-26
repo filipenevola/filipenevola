@@ -6,7 +6,7 @@ I'm Filipe Névola, and I'm @MeteorJS Evangelist, Developer & Instructor trying 
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/FilipeNevola?style=social)](https://twitter.com/FilipeNevola)
 
-[![Linkedin: FilipeNevola](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/FilipeNevola/)](https://www.linkedin.com/in/loiane/)
+[![Linkedin: FilipeNevola](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/FilipeNevola/)](https://www.linkedin.com/in/FilipeNevola/)
 
 [![Youtube: HowToCreateAnApp](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/c/HowToCreateAnAppDev)](https://www.youtube.com/c/HowToCreateAnAppDev) - How to Create an App (English)
 
