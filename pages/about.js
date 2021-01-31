@@ -9,7 +9,7 @@ const TEXT = {
         I'm Filipe Névola, a developer and instructor always looking for new
         technologies that bring more practical results, working with Javascript
         and Java for more than 10 years, working remotely since 2010 living in
-        13 different countries, and I already act on many roles in software
+        23 different countries, and I already act on many roles in software
         developer and team leadership. I have a bachelor in Computer Science
         (UEMS).
       </p>
@@ -23,7 +23,7 @@ const TEXT = {
       </p>
     ),
     work: key => (
-      <p key={key}>Currently I work for Pathable, Inc. (Seattle, EUA).</p>
+      <p key={key}>Currently I work as Meteor Evangelist and I produce content for my YouTube channels.</p>
     )
   },
   pt: {
@@ -32,7 +32,7 @@ const TEXT = {
         Sou Filipe Névola, um desenvolvedor e instrutor sempre buscando novas
         tecnologias que tragam resultados práticos, atuo com Javascript e Java
         há mais de 10 anos, desde 2010 eu trabalho em regime home-office
-        morando em 13 países neste período, já desempenhei variados papéis em
+        morando em 23 países neste período, já desempenhei variados papéis em
         desenvolvimento de software e liderança de equipes. Possuo graduação em
         Ciência da Computação pela UEMS.
       </p>
@@ -47,7 +47,7 @@ const TEXT = {
     ),
     work: key => (
       <p key={key}>
-        Atualmente eu trabalho para a Pathable, Inc. (Seattle, EUA).
+        Atualmente eu trabalho como Evangelista do Meteor e produzo conteúdo nos meus canais no YouTube.
       </p>
     )
   }
