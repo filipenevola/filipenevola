@@ -13,8 +13,8 @@ const TEXT = {
         Friday.<br/><br/>Prefer Portuguese? Subscribe to my Portuguese
         channel <a
         href="https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA">"Como
-        Criar um App": News videos every Tuesday and
-        Thursday.</a><br/><br/>
+        Criar um App"</a>: News videos every Tuesday and
+        Thursday.<br/><br/>
         I also have a <a
         href="https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA">channel</a> about
         business but only in Portuguese.<br/><br/>
