@@ -251,7 +251,7 @@ class LayoutComponent extends Component {
             }
 
             a {
-              text-decoration: none;
+              text-decoration: underline;
               color: #eee;
             }
 

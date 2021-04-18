@@ -7,7 +7,9 @@ const TEXT = {
     emailPlaceholder: "email address",
     followTwitter: "Follow me on Twitter @FilipeNevola",
     english: "English",
-    portuguese: "Portuguese"
+    portuguese: "Portuguese",
+    code: "Code",
+    business: "Business",
   },
   pt: {
     subscribeText: "Inscrave-se para receber Dicas para Desenvolvedores",
@@ -15,7 +17,9 @@ const TEXT = {
     emailPlaceholder: "seu email",
     followTwitter: "Me siga no Twitter @FilipeNevola",
     english: "Inglês",
-    portuguese: "Português"
+    portuguese: "Português",
+    code: "Programação",
+    business: "Negócios",
   }
 };
 
@@ -33,10 +37,13 @@ export const Mailchimp = ({ language }) => (
           Facebook
         </a>{' '}|{' '}
         <a href="https://www.youtube.com/c/HowToCreateAnAppDev">
-          Youtube ({TEXT[language].english})
+          Youtube {TEXT[language].code} ({TEXT[language].english})
         </a>{' '}|{' '}
         <a href="https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA">
-          Youtube ({TEXT[language].portuguese})
+          Youtube {TEXT[language].code} ({TEXT[language].portuguese})
+        </a>{' '}|{' '}
+        <a href="https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA">
+          Youtube {TEXT[language].business} ({TEXT[language].portuguese})
         </a>
 
         <div id="mc_embed_signup">
