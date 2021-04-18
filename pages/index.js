@@ -45,7 +45,7 @@ const TEXT = {
     )
   }
 };
-export default () => (
+const Index = () => (
   <Layout>
     {({language}) => (
       <Fragment>
@@ -54,3 +54,5 @@ export default () => (
     )}
   </Layout>
 );
+
+export default Index;

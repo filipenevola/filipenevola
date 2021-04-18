@@ -29,7 +29,7 @@ const TEXT = {
     )
   }
 };
-export default () => (
+const Tips = () => (
   <Layout>
     {({ language }) => (
       <Fragment>
@@ -38,3 +38,5 @@ export default () => (
     )}
   </Layout>
 );
+
+export default Tips;

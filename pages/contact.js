@@ -19,7 +19,7 @@ const TEXT = {
       href="https://discord.gg/bapXz4e">Discord</a></p>
   }
 };
-export default () => (
+const Contact = () => (
   <Layout>
     {({language}) => (
       <Fragment>
@@ -28,3 +28,5 @@ export default () => (
     )}
   </Layout>
 );
+
+export default Contact;

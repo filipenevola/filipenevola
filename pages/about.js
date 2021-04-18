@@ -52,7 +52,7 @@ const TEXT = {
     )
   }
 };
-export default () => (
+const About = () => (
   <Layout>
     {({ language }) => (
       <div className="text-wrap">
@@ -65,3 +65,5 @@ export default () => (
     )}
   </Layout>
 );
+
+export default About;
