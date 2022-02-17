@@ -1,8 +1,8 @@
 ### Hi / Olá 👋
 
-I'm Filipe Névola, and I'm @MeteorJS Evangelist, Developer & Instructor trying to be better every day.
+I'm Filipe Névola, and I'm @MeteorJS CEO, Developer & Instructor trying to be better every day.
 
-[Subscribe](https://www.youtube.com/c/HowToCreateAnAppDev) to my channel "How to create an app": Every day a new video.
+[Subscribe](https://www.youtube.com/c/HowToCreateAnAppDev) to my channel "How to create an app".
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/FilipeNevola?style=social)](https://twitter.com/FilipeNevola)
 
@@ -14,6 +14,6 @@ I'm Filipe Névola, and I'm @MeteorJS Evangelist, Developer & Instructor trying 
 
 [![Youtube: ComoCriarUmApp](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA)](https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA)  - Como Criar um App (Portuguese)
 
-[![Youtube: Provocações Sobre Negócios](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA)](https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA)  - Provocações sobre Negócios (Portuguese)
+[![Youtube: Provocações Sobre Negócios](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA)](https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA) - Provocações sobre Negócios (Portuguese)
 
 [Website](https://www.filipenevola.com/)

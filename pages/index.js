@@ -9,12 +9,10 @@ const TEXT = {
       <p key={key}>
         Subscribe to my English channel <a
         href="https://www.youtube.com/c/HowToCreateAnAppDev">"How to create an
-        app"</a>: New videos every Monday, Wednesday and
-        Friday.<br/><br/>Prefer Portuguese? Subscribe to my Portuguese
+        app"</a>.<br/><br/>Prefer Portuguese? Subscribe to my Portuguese
         channel <a
         href="https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA">"Como
-        Criar um App"</a>: News videos every Tuesday and
-        Thursday.<br/><br/>
+        Criar um App"</a>.<br/><br/>
         I also have a <a
         href="https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA">channel</a> about
         business but only in Portuguese.<br/><br/>
@@ -29,10 +27,10 @@ const TEXT = {
       <p key={key}>
         Se inscreva no meu canal <a
         href="https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA">"Como
-        criar um app"</a>: Toda Terça e Quinta um vídeo novo.<br/><br/>Prefere
+        criar um app"</a>.<br/><br/>Prefere
         Inglês? Se inscreva no meu canal em Inglês <a
         href="https://www.youtube.com/c/HowToCreateAnAppDev">"How to Create an
-        App"</a>: Toda Segunda, Quarta e Sexta um vídeo novo.<br/><br/>
+        App"</a>.<br/><br/>
         Vamos conversar sobre Negócios? <a
         href="https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA">"Provocações
         sobre Negócios"</a> é o meu canal onde falo sobre Dinheiro e Negócios de
