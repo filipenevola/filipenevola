@@ -42,7 +42,7 @@ export const Mailchimp = ({ language }) => (
         <a href="https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA">
           Youtube {TEXT[language].code} ({TEXT[language].portuguese})
         </a>{' '}|{' '}
-        <a href="https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA">
+        <a href="https://www.youtube.com/channel/UC4Qdgi2wJxNOQ5JQ3wJBGJw">
           Youtube {TEXT[language].business} ({TEXT[language].portuguese})
         </a>
 
