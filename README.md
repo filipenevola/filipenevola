@@ -2,9 +2,8 @@
 
 I'm Filipe Névola, and I'm @MeteorJS CEO, Developer & Instructor trying to be better every day.
 
-[Subscribe](https://www.youtube.com/c/HowToCreateAnAppDev) to my channel "How to create an app".
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/FilipeNevola?style=social)](https://twitter.com/FilipeNevola)
+[![Twitter](https://img.shields.io/twitter/follow/FilipeNevola?style=social)](https://twitter.com/FilipeNevola)
+[![Twitter](https://img.shields.io/twitter/follow/FilipeNevolaPt?style=social)](https://twitter.com/FilipeNevolaPt) (In Portuguese)
 
 [Instagram](https://www.instagram.com/filipenevola/) - Business & Personal Life (most in Portuguese)
 
@@ -14,6 +13,9 @@ I'm Filipe Névola, and I'm @MeteorJS CEO, Developer & Instructor trying to be b
 
 [![Youtube: ComoCriarUmApp](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA)](https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA)  - Como Criar um App (Portuguese)
 
-[![Youtube: Provocações Sobre Negócios](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA)](https://www.youtube.com/channel/UCAfhf9uh1osU2CW0fKrZ8xA) - Provocações sobre Negócios (Portuguese)
+[![Youtube: Provocações Sobre Negócios](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/channel/UC4Qdgi2wJxNOQ5JQ3wJBGJw)](https://www.youtube.com/channel/UC4Qdgi2wJxNOQ5JQ3wJBGJw) - Provocações sobre Negócios (Portuguese)
+
+[![Youtube: Dois Amigos e Uma Riqueza](https://img.shields.io/badge/-Youtube-red?style=flat-square&logo=Youtube&logoColor=white&link=https://www.youtube.com/channel/UCDEY__FBazZ4bcoKVhant0w)](https://www.youtube.com/channel/UCDEY__FBazZ4bcoKVhant0w) - Dois Amigos e Uma Riqueza (Portuguese)
 
 [Website](https://www.filipenevola.com/)
+[Quave](https://www.quave.dev/)
