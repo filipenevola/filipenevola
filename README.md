@@ -1,6 +1,6 @@
 ### Hi / Olá 👋
 
-I'm Filipe Névola, and I'm @MeteorJS CEO, Developer & Instructor trying to be better every day.
+I'm Filipe Névola, and I'm Provi CTO, Developer & Instructor trying to be better every day.
 
 [![Twitter](https://img.shields.io/twitter/follow/FilipeNevola?style=social)](https://twitter.com/FilipeNevola)
 [![Twitter](https://img.shields.io/twitter/follow/FilipeNevolaPt?style=social)](https://twitter.com/FilipeNevolaPt) (In Portuguese)
