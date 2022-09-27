@@ -18,7 +18,7 @@ const TEXT = {
       <p key={key}>
         I also like to disseminate knowledge giving talks. In 2013 I founded
         Quave, a development and teaching company. In 2017 I founded{" "}
-        <a href="http://codeftw.com">CodeFTW.com</a> that is a group of people
+        <a href="https://en.codeftw.dev">en.CodeFTW.dev</a> that is a group of people
         who believes code can change lives.
       </p>
     ),
@@ -41,7 +41,7 @@ const TEXT = {
       <p key={key}>
         Gosto de disseminar conhecimento através de palestras, já palestrei de
         eventos bem interessantes como TDC e QCon. Em 2017 fundei o{" "}
-        <a href="http://codeftw.com">CodeFTW.com</a>, um grupo de pessoas que
+        <a href="https://codeftw.com">CodeFTW.dev</a>, um grupo de pessoas que
         acreditam que código pode transformar realidades.
       </p>
     ),
