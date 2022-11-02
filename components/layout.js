@@ -3,7 +3,7 @@ import React, {useEffect, useState} from "react";
 import Link from "next/link";
 import Head from "next/head";
 import {Menu} from "./menu";
-import {withRouter} from "next/router";
+import {useRouter} from "next/router";
 import {Mailchimp} from "./mailchimp";
 import {initGA, logEvent, logPageView} from "../utils/analytics";
 
@@ -31,7 +31,8 @@ export const PAGES = [
   {route: "/contact", nameKey: "contact"}
 ];
 
-const LayoutComponent = ({children, router}) => {
+const LayoutComponent = ({children}) => {
+  const router = useRouter();
   const [menuOpened, setMenuOpened] = useState(false);
   const [language, setLanguage] = useState('en');
 
@@ -80,7 +81,7 @@ const LayoutComponent = ({children, router}) => {
             {router.pathname !== "/" && (
               <div className="home">
                 <Link href="/">
-                  <a>FN</a>
+                  FN
                 </Link>
               </div>
             )}
@@ -91,7 +92,7 @@ const LayoutComponent = ({children, router}) => {
           <h1 className="logo">
             {router.pathname === "/" && (
               <Link href="/">
-                <a>Filipe Névola</a>
+                Filipe Névola
               </Link>
             )}
             {router.pathname !== "/" &&
@@ -178,17 +179,7 @@ const LayoutComponent = ({children, router}) => {
         .logo {
           text-align: center;
           margin: 0;
-        }
-
-        .logo a {
           font-size: 1.5em;
-          color: #eee;
-        }
-
-        .logo a,
-        .logo a:hover,
-        .logo a:visited,
-        .logo a​:active {
           color: #eee;
         }
 
@@ -276,4 +267,4 @@ const LayoutComponent = ({children, router}) => {
   );
 }
 
-export const Layout = withRouter(LayoutComponent);
+export const Layout = LayoutComponent;
