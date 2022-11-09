@@ -36,14 +36,11 @@ export const Mailchimp = ({ language }) => (
         <a href="http://fb.com/filipenevoladev">
           Facebook
         </a>{' '}|{' '}
-        <a href="https://www.youtube.com/c/HowToCreateAnAppDev">
+        <a href="https://en.codeftw.dev/y">
           Youtube {TEXT[language].code} ({TEXT[language].english})
         </a>{' '}|{' '}
-        <a href="https://www.youtube.com/channel/UCZo_DmCzwmxMtv5Kv_dukpA">
+        <a href="https://codeftw.dev/y">
           Youtube {TEXT[language].code} ({TEXT[language].portuguese})
-        </a>{' '}|{' '}
-        <a href="https://www.youtube.com/channel/UC4Qdgi2wJxNOQ5JQ3wJBGJw">
-          Youtube {TEXT[language].business} ({TEXT[language].portuguese})
         </a>
 
         <div id="mc_embed_signup">
