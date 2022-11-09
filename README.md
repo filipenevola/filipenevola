@@ -1,6 +1,6 @@
 ### Hi / Olá 👋
 
-I'm Filipe Névola, and I'm Provi CTO, Developer & Instructor trying to be better every day.
+I'm Filipe Névola, and I'm Quave's CEO, Developer & Instructor trying to be better every day.
 
 Learn how to code at [codeftw.dev](https://codeftw.dev) (Portuguese) and [en.codeftw.dev](https://en.codeftw.dev) (English)
 

@@ -23,7 +23,7 @@ const TEXT = {
       </p>
     ),
     work: key => (
-      <p key={key}>Currently I work as Provi's CTO and I produce content for my YouTube channels.</p>
+      <p key={key}>Currently I'm Quave's CEO and I produce content on CodeFTW.</p>
     )
   },
   pt: {
@@ -47,7 +47,7 @@ const TEXT = {
     ),
     work: key => (
       <p key={key}>
-        Atualmente eu trabalho como CTO da Provi e produzo conteúdo nos meus canais no YouTube.
+        Sou CEO da Quave e produzo conteúdo para o CodeFTW.
       </p>
     )
   }

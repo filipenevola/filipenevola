@@ -14,9 +14,8 @@ const TEXT = {
         I also have a <a
         href="https://www.youtube.com/channel/UC4Qdgi2wJxNOQ5JQ3wJBGJw">channel</a> about
         business but only in Portuguese.<br/><br/>
-        <a href="https://twitter.com/sejaprovi">Provi</a>'s CTO, Developer
-        & Instructor trying to be better every day, founder of{" "}
-        <a href="https://twitter.com/quaveDev">Quave</a>.
+        <a href="https://twitter.com/quaveDev">Quave</a>'s CEO, Developer
+        & Instructor trying to be better every day.
       </p>
     )
   },
@@ -30,10 +29,8 @@ const TEXT = {
         Vamos conversar sobre Negócios? <a
         href="https://www.youtube.com/channel/UC4Qdgi2wJxNOQ5JQ3wJBGJw">"Inspirando Provocando"</a> é o meu canal onde falo sobre Dinheiro e Negócios de
         uma forma diferente.<br/><br/>
-        CTO da <a href="https://twitter.com/sejaprovi">Provi</a>,
-        Desenvolvedor e Instrutor tentando ser melhor todos os dias, fundador
-        da{" "}
-        <a href="https://twitter.com/quaveDev">Quave</a>.
+        CEO da <a href="https://twitter.com/quaveDev">Quave</a>,
+        Desenvolvedor e Instrutor tentando ser melhor todos os dias.
       </p>
     )
   }
