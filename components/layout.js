@@ -18,7 +18,7 @@ const LayoutComponent = ({children}) => {
   }, [])
 
   return (
-    <div className="h-full m-16">
+    <div className="h-full my-16 mx-6 md:mx-12">
       <Head>
         <title>
           Filipe Névola
@@ -42,6 +42,17 @@ const LayoutComponent = ({children}) => {
       </header>
       {children}
       <footer>
+        <div className="justify-center flex gap-x-4 mt-16">
+          <a
+            href="https://twitter.com/FilipeNevola"
+            className="underline">Twitter</a>
+          <a
+            href="https://instagram.com/FilipeNevola"
+            className="underline">Instagram</a>
+          <a
+            href="https://linkedin.com/in/FilipeNevola"
+            className="underline">LinkedIn</a>
+        </div>
       </footer>
     </div>
   );
