@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "next -p 4000",
+    "dev": "next -p 4000 --turbo",
     "build": "next build",
     "start": "next start"
   },
@@ -11,7 +11,8 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
-    "next": "^13.0.1",
+    "eslint-config-next": "^13.1.0",
+    "next": "^13.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-ga": "^3.3.1"
