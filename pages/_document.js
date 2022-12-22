@@ -6,10 +6,6 @@ export default function Document() {
     <Html>
       <Head>
         <link rel="icon" type="image/x-icon" href="/static/favicon.ico"/>
-        <link
-          href="https://fonts.googleapis.com/css?family=K2D"
-          rel="stylesheet"
-        />
       </Head>
       <body>
       <Main/>
