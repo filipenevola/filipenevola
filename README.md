@@ -5,7 +5,6 @@ I'm Filipe Névola, and I'm Quave's CEO, Developer & Instructor trying to be bet
 Learn how to code at [codeftw.dev](https://codeftw.dev) (Portuguese) and [en.codeftw.dev](https://en.codeftw.dev) (English)
 
 [![Twitter](https://img.shields.io/twitter/follow/FilipeNevola?style=social)](https://twitter.com/FilipeNevola)
-[![Twitter](https://img.shields.io/twitter/follow/FilipeNevolaPt?style=social)](https://twitter.com/FilipeNevolaPt) (In Portuguese)
 
 [Instagram](https://www.instagram.com/filipenevola/) - Business & Personal Life (most in Portuguese)
 
