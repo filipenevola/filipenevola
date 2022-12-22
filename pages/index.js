@@ -1,41 +1,42 @@
 import React, {Fragment} from "react";
 
+import Image from 'next/image';
 import {Layout} from "../components/layout";
-import {Content} from "../components/content";
 
-const TEXT = {
-  en: {
-    intro: key => (
-      <p key={key}>
-        Subscribe to my English channel <a
-        href="https://en.codeftw.dev/y">"CodeFTW"</a>.<br/><br/>Prefer Portuguese? Subscribe to my Portuguese
-        channel <a
-        href="https://codeftw.dev/y">"CodeFTW"</a>.<br/><br/>
-        <a href="https://twitter.com/quaveDev">Quave</a>'s CEO, Developer
-        & Instructor trying to be better every day.
-      </p>
-    )
-  },
-  pt: {
-    intro: key => (
-      <p key={key}>
-        Se inscreva no meu canal <a
-        href="https://codeftw.dev/y">"CodeFTW"</a>.<br/><br/>Prefere
-        Inglês? Se inscreva no meu canal em Inglês <a
-        href="https://en.codeftw.dev/y">"CodeFTW"</a>.<br/><br/>
-        CEO da <a href="https://twitter.com/quaveDev">Quave</a>,
-        Desenvolvedor e Instrutor tentando ser melhor todos os dias.
-      </p>
-    )
-  }
-};
 const Index = () => (
   <Layout>
-    {({language}) => (
-      <Fragment>
-        <Content language={language} text={TEXT}/>
-      </Fragment>
-    )}
+    <div className="flex flex-col justify-center items-center space-y-4">
+      <div className="justify-center flex">
+        <div className="w-3/4 md:w-5/6 justify-center flex">
+          <Image src="/static/perfil2022.jpg" width="200"
+                 height="200" className="rounded-2xl"/>
+        </div>
+      </div>
+      <div className="flex flex-col space-y-4">
+      <p>I'm Filipe Névola, and I'm Quave's CEO, Developer & Instructor trying
+        to be better every day.</p>
+
+      <p>Learn how to code at <a
+        href="https://codeftw.dev" className="underline">CodeFTW</a> (Portuguese)
+        and <a href="https://en.codeftw.dev" className="underline">CodeFTW</a> (English).</p>
+
+      <p>Right now I'm working in a new web app called <a
+        href="https://lemeno.io" className="underline">Lemeno</a>.</p>
+
+      <p>Are you a nerd? Check this <a
+        href="https://www.lemeno.io/nerds" className="underline">page</a>. Or if you are a creator, <a
+        href="https://www.lemeno.io/creators" className="underline">this</a> is for you.</p>
+      </div>
+
+      <div className="justify-center flex gap-x-4">
+        <a
+          href="https://twitter.com/FilipeNevola" className="underline">Twitter</a>
+        <a
+          href="https://instagram.com/FilipeNevola" className="underline">Instagram</a>
+        <a
+          href="https://linkedin.com/in/FilipeNevola" className="underline">LinkedIn</a>
+      </div>
+    </div>
   </Layout>
 );
 
