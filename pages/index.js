@@ -13,7 +13,9 @@ const Index = () => (
         </div>
       </div>
       <div className="flex flex-col space-y-4">
-        <p>I'm Filipe Névola, and I'm Quave's CEO, Developer & Instructor trying
+        <p>I'm Filipe Névola, and I'm <a
+          href="https://quave.dev"
+          className="underline">Quave</a>'s CEO, Developer & Instructor trying
           to be better every day.</p>
 
         <p>Learn how to code at <a
