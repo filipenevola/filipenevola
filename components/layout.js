@@ -40,7 +40,9 @@ const LayoutComponent = ({children}) => {
           </h1>
         </div>
       </header>
-      {children}
+      <div className="flex justify-center">
+        {children}
+      </div>
       <footer>
         <div className="justify-center flex gap-x-4 mt-16">
           <a
