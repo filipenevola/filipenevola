@@ -19,6 +19,10 @@ const Index = () => (
           className="underline">Quave</a>'s CEO, Developer & Instructor trying
           to be better every day.</p>
 
+<p>My Portuguese <a
+          href="https://news.lemeno.io/filipe-nevola"
+          className="underline">Newsletter</a>.</p>
+
         <p>Learn how to code at <a
           href="https://codeftw.dev"
           className="underline">CodeFTW</a> (Portuguese)
