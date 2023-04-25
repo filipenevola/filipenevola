@@ -19,7 +19,7 @@ const Index = () => (
           className="underline">Quave</a>'s CEO, Developer & Instructor trying
           to be better every day.</p>
 
-<p>My Portuguese <a
+        <p>My Portuguese <a
           href="https://news.lemeno.io/filipe-nevola"
           className="underline">Newsletter</a>.</p>
 
@@ -29,30 +29,49 @@ const Index = () => (
           and <a href="https://en.codeftw.dev"
                  className="underline">CodeFTW</a> (English).</p>
 
-        <p>Right now I'm working in a new web app called <a
-          href="https://lemeno.io" className="underline">Lemeno</a>.</p>
-
-        <p>Are you a nerd? Check this <a
-          href="https://www.lemeno.io/nerds" className="underline">page</a>. Or
-          if you are a creator, <a
-            href="https://www.lemeno.io/creators"
-            className="underline">this</a> is for you.</p>
-      </div>
-      <div className="font-semibold pt-4">
-        Articles
-      </div>
-      <ul
-        className="space-y-2">
-        <li><a
-          href="https://medium.com/@filipenevola/how-to-migrate-to-mono-repository-without-losing-any-git-history-7a4d80aa7de2"
-          target="_blank">- How to migrate to Mono Repository without losing any Git history</a></li>
-        <li><a
-          href="https://medium.com/@filipenevola/vscode-missing-features-837a6bd660ca"
-          target="_blank">- VSCode
-          Missing Features (compared to WebStorm)</a></li>
-      </ul>
+        <p>Right now I'm building with my team at Quave:</p>
+        <ul className="space-y-2">
+          <li>- <a
+            href="https://zcloud.ws" className="underline">zCloud</a>: Cloud. Made easy.
+            Experience the flexibility and ease of Cloud hosting with affordable prices and amazing support.
+          </li>
+          <li>- <a
+            href="https://lemeno.io" className="underline">Lemeno</a>: Just what matters. No distractions.
+            Read only posts that matter to you. Free of Ads and Algorithms.</li>
+        </ul>
     </div>
-  </Layout>
-);
+    <div className="font-semibold pt-4">
+      Twitter Threads
+    </div>
+    <ul
+      className="space-y-2">
+      <li><a
+        href="https://twitter.com/search?q=%23quaveDev%20from%3Afilipenevola&src=typed_query"
+        target="_blank">- How to be a Qua Ve Developer</a></li>
+      <li><a
+        href="https://twitter.com/FilipeNevola/status/1622936155816599552"
+        target="_blank">- Já entrevistei mais de 500 Programadores Javascript. E aí, o que um dev Javascript deve saber?</a></li>
+      <li><a
+        href="https://twitter.com/FilipeNevola/status/1534523522407620611"
+        target="_blank">- Em 2009 eu ganhava R$ 500 por mês. Em 2018: R$ 36 mil. O que aconteceu no meio disso?</a></li>
+    </ul>
+    <div className="font-semibold pt-4">
+      Articles
+    </div>
+    <ul
+      className="space-y-2">
+      <li><a
+        href="https://medium.com/@filipenevola/how-to-migrate-to-mono-repository-without-losing-any-git-history-7a4d80aa7de2"
+        target="_blank">- How to migrate to Mono Repository without losing any
+        Git history</a></li>
+      <li><a
+        href="https://medium.com/@filipenevola/vscode-missing-features-837a6bd660ca"
+        target="_blank">- VSCode
+        Missing Features (compared to WebStorm)</a></li>
+    </ul>
+  </div>
+</Layout>
+)
+;
 
 export default Index;
