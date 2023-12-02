@@ -38,7 +38,7 @@ const Index = () => (
         </ul>
     </div>
     <div className="font-semibold pt-4">
-      Twitter Threads
+      X Threads
     </div>
     <ul
       className="space-y-2">
