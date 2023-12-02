@@ -29,15 +29,12 @@ const Index = () => (
           and <a href="https://en.codeftw.dev"
                  className="underline">CodeFTW</a> (English).</p>
 
-        <p>Right now I'm building with my team at Quave:</p>
+        <p>Right now, I'm building with my product team at Quave:</p>
         <ul className="space-y-2">
           <li>- <a
             href="https://zcloud.ws" className="underline">zCloud</a>: Cloud. Made easy.
-            Experience the flexibility and ease of Cloud hosting with affordable prices and amazing support.
+            Experience the flexibility and ease of Cloud hosting with amazing support.
           </li>
-          <li>- <a
-            href="https://lemeno.io" className="underline">Lemeno</a>: Just what matters. No distractions.
-            Read only posts that matter to you. Free of Ads and Algorithms.</li>
         </ul>
     </div>
     <div className="font-semibold pt-4">
