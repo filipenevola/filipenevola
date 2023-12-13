@@ -58,6 +58,9 @@ const Index = () => (
     <ul
       className="space-y-2">
       <li><a
+        href="https://dev.to/filipenevola"
+        target="_blank">- Blog (dev.to/filipenevola)</a></li>
+      <li><a
         href="https://medium.com/@filipenevola/how-to-migrate-to-mono-repository-without-losing-any-git-history-7a4d80aa7de2"
         target="_blank">- How to migrate to Mono Repository without losing any
         Git history</a></li>
