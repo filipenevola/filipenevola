@@ -25,17 +25,10 @@ const Index = () => (
 
         <p>Learn how to code at <a
           href="https://codeftw.dev"
-          className="underline">CodeFTW</a> (Portuguese)
-          and <a href="https://en.codeftw.dev"
-                 className="underline">CodeFTW</a> (English).</p>
+          className="underline">CodeFTW</a> (Free and in Portuguese)
+          and <a href="https://aiproofdev.com"
+                 className="underline">AIProofDev</a> (Paid and in English).</p>
 
-        <p>Right now, I'm building with my product team at Quave:</p>
-        <ul className="space-y-2">
-          <li>- <a
-            href="https://zcloud.ws" className="underline">zCloud</a>: Cloud. Made easy.
-            Experience the flexibility and ease of Cloud hosting with amazing support.
-          </li>
-        </ul>
     </div>
     <div className="font-semibold pt-4">
       X Threads
