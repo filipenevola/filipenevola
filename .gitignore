@@ -8,3 +8,5 @@ node_modules
 !.idea/codeStyleSettings.xml
 !.idea/encodings.xml
 !.idea/runConfigurations
+
+# force deploy 
