@@ -1,4 +1,5 @@
 import { K2D } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 const font = K2D({
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
       </body>
+      <GoogleAnalytics gaId="G-8BJDVVE5YK" />
     </html>
   );
 }
