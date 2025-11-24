@@ -1,20 +1,10 @@
 'use client';
 
-import { useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { initGA, logPageView } from '../utils/analytics';
 
 const LayoutComponent = ({ children }) => {
   const pathname = usePathname();
-
-  useEffect(() => {
-    if (!window.GA_INITIALIZED) {
-      initGA();
-      window.GA_INITIALIZED = true;
-    }
-    logPageView();
-  }, []);
 
   return (
     <div className="h-full my-16 mx-6 md:mx-12">
