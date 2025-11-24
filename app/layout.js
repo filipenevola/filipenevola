@@ -1,5 +1,4 @@
 import { K2D } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 
 const font = K2D({
@@ -26,9 +25,7 @@ export default function RootLayout({ children }) {
         <main>
           {children}
         </main>
-        <Analytics />
       </body>
     </html>
   );
 }
-
