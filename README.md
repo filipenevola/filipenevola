@@ -56,3 +56,5 @@ docker run -p 3000:3000 filipenevola
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+<!-- Build trigger: 2025-11-28 -->
