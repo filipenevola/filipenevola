@@ -8,7 +8,30 @@ const font = K2D({
 });
 
 export const metadata = {
-  title: 'Filipe Névola',
+  title: {
+    default: 'Filipe Névola - CEO & Developer at Quave',
+    template: '%s | Filipe Névola',
+  },
+  description:
+    'CEO & Developer at Quave. Building Quave ONE (Cloud Platform), Quave Services (Dev Boutique), and Erva Token (Premium Yerba Mate). Instructor and entrepreneur focused on execution and sustainable growth.',
+  metadataBase: new URL('https://filipenevola.com'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Filipe Névola',
+    images: [
+      {
+        url: '/api/og',
+        width: 1200,
+        height: 630,
+        alt: 'Filipe Névola - CEO & Developer at Quave',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@FilipeNevola',
+    images: ['/api/og'],
+  },
   icons: {
     icon: '/static/favicon.ico',
   },
