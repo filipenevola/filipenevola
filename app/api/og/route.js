@@ -2,28 +2,28 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
-// Personal brand colors - clean dark theme with accent
+// Personal brand colors - black/neutral/white theme
 const colors = {
-  // Backgrounds (deep dark blue/slate)
-  bgPrimary: '#0f172a',
-  bgSecondary: '#1e293b',
-  bgCard: '#334155',
-  bgCardBorder: '#475569',
-  // Text colors
-  textPrimary: '#f1f5f9',
-  textSecondary: '#94a3b8',
-  textMuted: '#64748b',
-  textHeading: '#f8fafc',
-  // Accent (teal/cyan for tech feel)
-  accent: '#22d3d3',
-  accentHover: '#5eead4',
-  accentMuted: '#14b8a6',
+  // Backgrounds (pure black and neutral grays)
+  bgPrimary: '#000000',
+  bgSecondary: '#0a0a0a',
+  bgCard: '#262626',
+  bgCardBorder: '#404040',
+  // Text colors (neutral palette)
+  textPrimary: '#f5f5f5',
+  textSecondary: '#d4d4d4',
+  textMuted: '#737373',
+  textHeading: '#ffffff',
+  // Accent (white/light gray for monochrome look)
+  accent: '#ffffff',
+  accentHover: '#e5e5e5',
+  accentMuted: '#a3a3a3',
 };
 
 // Gradients
 const gradients = {
   background: `linear-gradient(135deg, ${colors.bgPrimary} 0%, ${colors.bgSecondary} 100%)`,
-  accent: `linear-gradient(90deg, ${colors.accentMuted}, ${colors.accent}, ${colors.accentHover})`,
+  accent: `linear-gradient(90deg, ${colors.accentMuted}, ${colors.textPrimary}, ${colors.accent})`,
 };
 
 // Default CTAs per type
@@ -107,7 +107,7 @@ export async function GET(request) {
                 style={{
                   display: 'flex',
                   alignItems: 'center',
-                  background: `rgba(34, 211, 211, 0.1)`,
+                  background: `rgba(255, 255, 255, 0.1)`,
                   border: `1px solid ${colors.accent}`,
                   borderRadius: 20,
                   padding: '8px 16px',
