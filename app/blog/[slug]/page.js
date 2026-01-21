@@ -25,7 +25,10 @@ export async function generateMetadata({ params }) {
 
   // Build OG image URL with URL-encoded parameters
   const ogImageParams = new URLSearchParams({
+    type: 'blog',
     title: post.subject,
+    badge: 'Blog Post',
+    cta: 'Read Article →',
   });
   if (post.preHeader) {
     ogImageParams.set('subtitle', post.preHeader);
