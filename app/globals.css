@@ -5,7 +5,7 @@
 @layer components {
   /* Blog content styles */
   .blog-content {
-    @apply text-gray-300;
+    @apply text-neutral-300;
   }
 
   .blog-content h1 {
@@ -25,11 +25,11 @@
   }
 
   .blog-content hr {
-    @apply my-4 border-gray-600;
+    @apply my-4 border-neutral-600;
   }
 
   .blog-content p {
-    @apply my-4 leading-7 text-gray-300;
+    @apply my-4 leading-7 text-neutral-300;
   }
 
   .blog-content p img {
@@ -37,15 +37,15 @@
   }
 
   .blog-content a {
-    @apply text-cyan-500 hover:text-cyan-400 underline;
+    @apply text-white hover:text-neutral-400 underline;
   }
 
   .blog-content ul {
-    @apply block list-disc my-4 pl-8 text-gray-300;
+    @apply block list-disc my-4 pl-8 text-neutral-300;
   }
 
   .blog-content ol {
-    @apply block list-decimal my-4 pl-8 text-gray-300;
+    @apply block list-decimal my-4 pl-8 text-neutral-300;
   }
 
   .blog-content li {
@@ -53,19 +53,19 @@
   }
 
   .blog-content pre {
-    @apply bg-gray-800 py-4 px-4 my-4 rounded-lg overflow-x-auto;
+    @apply bg-neutral-800 py-4 px-4 my-4 rounded-lg overflow-x-auto;
   }
 
   .blog-content code {
-    @apply text-cyan-400 font-mono text-sm;
+    @apply text-neutral-200 font-mono text-sm;
   }
 
   .blog-content pre code {
-    @apply text-gray-300;
+    @apply text-neutral-300;
   }
 
   .blog-content blockquote {
-    @apply border-l-4 border-cyan-500 pl-4 my-4 italic text-gray-400;
+    @apply border-l-4 border-neutral-500 pl-4 my-4 italic text-neutral-400;
   }
 
   .blog-content strong {
@@ -82,11 +82,11 @@
 
   .blog-content th,
   .blog-content td {
-    @apply border border-gray-600 px-4 py-2 text-left;
+    @apply border border-neutral-600 px-4 py-2 text-left;
   }
 
   .blog-content th {
-    @apply bg-gray-700 font-medium text-white;
+    @apply bg-neutral-800 font-medium text-white;
   }
 }
 

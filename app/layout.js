@@ -45,7 +45,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={font.className}>
+      <body className={`${font.className} bg-black text-neutral-100`}>
         <main>
           {children}
         </main>

@@ -12,25 +12,25 @@ const LayoutComponent = ({ children }) => {
     <div className="h-full my-16 mx-6 md:mx-12">
       <header>
         <div className="flex justify-center">
-          <h1 className="text-xl font-semibold mb-2">
-            {isHome && <Link href="/">Filipe Névola</Link>}
-            {isBlog && <Link href="/">Filipe Névola</Link>}
+          <h1 className="text-xl font-semibold mb-2 text-white">
+            {isHome && <Link href="/" className="hover:text-neutral-400 transition-colors">Filipe Névola</Link>}
+            {isBlog && <Link href="/" className="hover:text-neutral-400 transition-colors">Filipe Névola</Link>}
           </h1>
         </div>
       </header>
       <div className="flex justify-center">{children}</div>
       <footer>
-        <div className="justify-center flex gap-x-4 mt-16">
-          <Link href="/blog" className="underline">
+        <div className="justify-center flex gap-x-4 mt-16 text-neutral-300">
+          <Link href="/blog" className="underline hover:text-neutral-400 transition-colors">
             Blog
           </Link>
-          <a href="https://twitter.com/FilipeNevola" className="underline">
+          <a href="https://twitter.com/FilipeNevola" className="underline hover:text-neutral-400 transition-colors">
             Twitter
           </a>
-          <a href="https://instagram.com/FilipeNevola" className="underline">
+          <a href="https://instagram.com/FilipeNevola" className="underline hover:text-neutral-400 transition-colors">
             Instagram
           </a>
-          <a href="https://linkedin.com/in/FilipeNevola" className="underline">
+          <a href="https://linkedin.com/in/FilipeNevola" className="underline hover:text-neutral-400 transition-colors">
             LinkedIn
           </a>
         </div>
