@@ -1,0 +1,32 @@
+import Link from 'next/link';
+import { formatDateTime } from '@/lib/mongodb';
+import { Layout } from '@/components/layout';
+
+export default function PostPage({ post }) {
+  return (
+    <Layout>
+      <article className="flex flex-col w-full md:w-3/4 xl:w-1/2">
+        <Link
+          className="flex items-center gap-2 text-cyan-500 hover:text-cyan-400 transition-colors mb-8"
+          href="/blog"
+        >
+          &larr; Back to Blog
+        </Link>
+
+        <small className="text-gray-500 text-sm">
+          {formatDateTime(post.publishedAt)}
+        </small>
+        <h1 className="text-2xl font-semibold mt-2">{post.subject}</h1>
+        {post.preHeader && (
+          <p className="text-lg text-gray-400 font-light mt-4">
+            {post.preHeader}
+          </p>
+        )}
+
+        <div className="blog-content mt-8">
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        </div>
+      </article>
+    </Layout>
+  );
+}
