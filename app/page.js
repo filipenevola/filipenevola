@@ -32,18 +32,6 @@ export default function Home() {
             </a>
             .
           </p>
-
-          <p className="text-neutral-300">
-            Learn how to code at{' '}
-            <a href="https://codeftw.dev" className="underline text-white hover:text-neutral-400">
-              CodeFTW
-            </a>{' '}
-            (Free and in Portuguese) and{' '}
-            <a href="https://aiproofdev.com" className="underline text-white hover:text-neutral-400">
-              AIProofDev
-            </a>{' '}
-            (Paid and in English).
-          </p>
         </div>
         <div className="font-semibold pt-4 text-white">X Threads</div>
         <ul className="space-y-2 text-neutral-300">
@@ -74,32 +62,6 @@ export default function Home() {
             >
               - Em 2009 eu ganhava R$ 500 por mês. Em 2018: R$ 36 mil. O que
               aconteceu no meio disso?
-            </a>
-          </li>
-        </ul>
-        <div className="font-semibold pt-4 text-white">Articles</div>
-        <ul className="space-y-2 text-neutral-300">
-          <li>
-            <a href="https://dev.to/filipenevola" target="_blank" className="hover:text-white transition-colors">
-              - Blog (dev.to/filipenevola)
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://medium.com/@filipenevola/how-to-migrate-to-mono-repository-without-losing-any-git-history-7a4d80aa7de2"
-              target="_blank"
-              className="hover:text-white transition-colors"
-            >
-              - How to migrate to Mono Repository without losing any Git history
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://medium.com/@filipenevola/vscode-missing-features-837a6bd660ca"
-              target="_blank"
-              className="hover:text-white transition-colors"
-            >
-              - VSCode Missing Features (compared to WebStorm)
             </a>
           </li>
         </ul>
