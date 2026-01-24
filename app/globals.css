@@ -1,91 +1,108 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@layer components {
-  /* Blog content styles */
-  .blog-content {
-    @apply text-neutral-300;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
   }
+}
 
-  .blog-content h1 {
+@utility blog-content {
+  /* Blog content styles */
+  @apply text-neutral-300;
+
+  & h1 {
     @apply pt-6 text-3xl leading-9 font-medium text-white;
   }
 
-  .blog-content h2 {
+  & h2 {
     @apply pt-6 text-2xl leading-7 font-medium text-white;
   }
 
-  .blog-content h3 {
+  & h3 {
     @apply pt-4 text-xl leading-6 font-medium text-white;
   }
 
-  .blog-content h4 {
+  & h4 {
     @apply pt-3 text-lg leading-5 font-medium text-white;
   }
 
-  .blog-content hr {
+  & hr {
     @apply my-4 border-neutral-600;
   }
 
-  .blog-content p {
+  & p {
     @apply my-4 leading-7 text-neutral-300;
   }
 
-  .blog-content p img {
+  & p img {
     @apply mt-4 rounded-lg;
   }
 
-  .blog-content a {
+  & a {
     @apply text-white hover:text-neutral-400 underline;
   }
 
-  .blog-content ul {
+  & ul {
     @apply block list-disc my-4 pl-8 text-neutral-300;
   }
 
-  .blog-content ol {
+  & ol {
     @apply block list-decimal my-4 pl-8 text-neutral-300;
   }
 
-  .blog-content li {
+  & li {
     @apply pb-2;
   }
 
-  .blog-content pre {
+  & pre {
     @apply bg-neutral-800 py-4 px-4 my-4 rounded-lg overflow-x-auto;
   }
 
-  .blog-content code {
+  & code {
     @apply text-neutral-200 font-mono text-sm;
   }
 
-  .blog-content pre code {
+  & pre code {
     @apply text-neutral-300;
   }
 
-  .blog-content blockquote {
+  & blockquote {
     @apply border-l-4 border-neutral-500 pl-4 my-4 italic text-neutral-400;
   }
 
-  .blog-content strong {
+  & strong {
     @apply font-medium text-white;
   }
 
-  .blog-content em {
+  & em {
     @apply italic;
   }
 
-  .blog-content table {
+  & table {
     @apply w-full my-4 border-collapse;
   }
 
-  .blog-content th,
-  .blog-content td {
+  & th {
     @apply border border-neutral-600 px-4 py-2 text-left;
   }
 
-  .blog-content th {
+  & td {
+    @apply border border-neutral-600 px-4 py-2 text-left;
+  }
+
+  & th {
     @apply bg-neutral-800 font-medium text-white;
   }
 }
