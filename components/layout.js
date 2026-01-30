@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { NewsletterCTA } from './NewsletterSubscribe';
 
 const LayoutComponent = ({ children }) => {
   const pathname = usePathname();
@@ -24,6 +25,7 @@ const LayoutComponent = ({ children }) => {
           <Link href="/blog" className="underline hover:text-neutral-400 transition-colors">
             Blog
           </Link>
+          <NewsletterCTA />
           <a href="https://twitter.com/FilipeNevola" className="underline hover:text-neutral-400 transition-colors">
             Twitter
           </a>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { formatDateTime } from '@/lib/mongodb';
 import { Layout } from '@/components/layout';
+import { NewsletterCTA } from '@/components/NewsletterSubscribe';
 
 export default function PostPage({ post }) {
   return (
@@ -26,6 +27,8 @@ export default function PostPage({ post }) {
         <div className="blog-content mt-8">
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </div>
+
+        <NewsletterCTA variant="post-footer" />
       </article>
     </Layout>
   );

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { getBlogPosts, formatDateTime } from '@/lib/mongodb';
 import { Layout } from '@/components/layout';
+import { NewsletterLink } from '@/components/NewsletterSubscribe';
 
 export default async function BlogPage() {
   const posts = await getBlogPosts();
@@ -8,13 +9,16 @@ export default async function BlogPage() {
   return (
     <Layout>
       <div className="flex flex-col w-full md:w-3/4 xl:w-1/2">
-        <div className="mb-8">
+        <div className="mb-8 flex justify-between items-center">
           <Link
             href="/"
             className="text-white hover:text-neutral-400 transition-colors"
           >
             &larr; Back to Home
           </Link>
+          <NewsletterLink className="text-sm text-neutral-400 hover:text-white transition-colors cursor-pointer">
+            Subscribe to updates
+          </NewsletterLink>
         </div>
 
         <h1 className="text-2xl font-semibold mb-4 text-white">Blog</h1>

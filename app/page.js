@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Layout } from '../components/layout';
+import { NewsletterCTA } from '../components/NewsletterSubscribe';
 
 export default function Home() {
   return (
@@ -49,6 +50,9 @@ export default function Home() {
             </a>
             .
           </p>
+          <div className="text-neutral-300">
+            <NewsletterCTA variant="inline-standalone" />
+          </div>
           <div className="font-semibold pt-4 text-white">X Threads</div>
           <ul className="space-y-2 text-neutral-300">
             <li>
