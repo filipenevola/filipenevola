@@ -7,11 +7,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Deploy
-        uses: zcloud-ws/zcloud-deploy-action@main
+        uses: quaveone/quaveone-deploy-action@main
         with:
-          env-token: ${{ secrets.ZCLOUD_ENV_TOKEN }}
+          user-token: ${{ secrets.QUAVEONE_USER_TOKEN }}
           env: "filipenevola-filipenevola-production"
-
-
