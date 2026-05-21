@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CONTENT_TYPES } from '@/lib/site';
 import { formatDateTime } from '@/lib/mongodb';
+import { TimelineTypeIcon } from '@/components/TimelineTypeIcon';
 
 const TYPE_STYLES = {
   noticia: 'bg-emerald-900/50 text-emerald-100 border-emerald-600',
@@ -18,6 +19,7 @@ export function TimelineItem({ entry }) {
         aria-hidden
       />
       <div className="flex flex-wrap items-center gap-2 text-sm">
+        <TimelineTypeIcon type={entry.type} />
         <span
           className={`rounded-full border px-2.5 py-0.5 text-xs font-medium uppercase tracking-wide ${TYPE_STYLES[entry.type]}`}
         >

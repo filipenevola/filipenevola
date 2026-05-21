@@ -15,17 +15,17 @@ This file contains Quave Cloud identifiers for this project, used by MCP tools.
 | Field | Value |
 |-------|-------|
 | **App Env ID** | `s7mze9j3xcTSuQDNz` |
-| **App ID** | `cCXoZpvtXnG4xrbxe` |
 | **Environment Name** | production |
 | **Region** | us-5 |
-| **Git Branch** | cli |
-| **CLI Env Name** | filipenevola-palmeirasapp-production |
-| **Hosts** | palmeirasapp-production-filipenevola.svc-us5.zcloud.ws |
+| **Git Branch** | `main`, `cursor/palmeirasapp-1aeb` |
+| **CLI Env Name** | `filipenevola-palmeirasapp-production` |
+| **Hosts** | `palmeirasapp-production-filipenevola.svc-us5.zcloud.ws` |
 
-## GitHub Actions Deploy
+### Variáveis de ambiente (runtime)
 
-| Field | Value |
-|-------|-------|
-| **Workflow** | `.github/workflows/deploy.yml` |
-| **Secret** | `QUAVE_ONE_PROD_TOKEN` |
-| **Env** | `filipenevola-palmeirasapp-production` |
+| Nome | Secret | Descrição |
+|------|--------|-----------|
+| `MONGODB_URI` | sim | Conexão MongoDB (`palmeirasapp`) |
+| `POSTS_API_SECRET` | sim | Token da API `/api/posts` (mín. 32 chars) |
+| `NEXT_PUBLIC_SITE_URL` | não | URL pública para OG |
+| `NEXT_PUBLIC_GOOGLE_CALENDAR_URL` | não | Embed do calendário de jogos |

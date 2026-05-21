@@ -5,14 +5,14 @@
   "scripts": {
     "dev": "next dev -p 4000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "seed": "node scripts/seed-posts.js"
   },
   "engines": {
     "node": ">=20.9.0"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.0",
-    "mongodb": "^7.2.0",
     "next": "16.2.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
