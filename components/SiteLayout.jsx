@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { MainNav } from './MainNav';
 
 export function SiteLayout({ children }) {
@@ -8,7 +9,12 @@ export function SiteLayout({ children }) {
         {children}
       </div>
       <footer className="border-t border-palmeiras-light/30 py-8 text-center text-sm text-palmeiras-muted">
-        <p>Palmeiras App — conteúdo não oficial do clube.</p>
+        <p>
+          Palmeiras App — conteúdo não oficial do clube.{' '}
+          <Link href="/sobre" className="text-white underline hover:text-palmeiras-muted">
+            Nossa proposta
+          </Link>
+        </p>
       </footer>
     </div>
   );

@@ -1,5 +1,5 @@
 import { SiteLayout } from '@/components/SiteLayout';
-import { PageHeader } from '@/components/PageHeader';
+import { SiteHero } from '@/components/SiteHero';
 import { TimelineItem } from '@/components/TimelineItem';
 import { EmptyState } from '@/components/EmptyState';
 import { getTimeline } from '@/lib/data/timeline';
@@ -16,10 +16,9 @@ export default async function HomePage() {
 
   return (
     <SiteLayout>
-      <PageHeader
-        title="Início"
-        description="Timeline unificada com notícias do crawler, opiniões próprias e jogos do Verdão."
-      />
+      <SiteHero />
+
+      <h2 className="mb-6 text-lg font-semibold text-white">Últimas do Verdão</h2>
 
       {timeline.length === 0 ? (
         <EmptyState message="Nenhum conteúdo publicado ainda. Em breve novidades aqui." />

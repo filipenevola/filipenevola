@@ -19,11 +19,12 @@ const gradients = {
 };
 
 const defaultSubtitles = {
-  inicio: 'Notícias, opiniões e agenda de jogos do Verdão.',
-  noticias: 'Notícias reunidas por crawler com inteligência artificial.',
-  opinioes: 'Textos e vídeos próprios sobre o Palmeiras.',
+  inicio: 'Torcida equilibrada: otimista, realista e sem drama.',
+  noticias: 'Notícias com critério — sem alarmismo nem clickbait.',
+  opinioes: 'Opiniões ponderadas, sem gritaria de torcida.',
   jogos: 'Próximos jogos, resultados e Google Calendar.',
-  default: 'Notícias, opiniões e jogos do Palmeiras.',
+  sobre: 'Site de torcedor: pé no chão, sem chiliquismo nem sensacionalismo.',
+  default: 'Torça feliz. Pé no chão, sem drama.',
 };
 
 const defaultCtas = {
@@ -31,6 +32,7 @@ const defaultCtas = {
   noticias: 'Ler notícias →',
   opinioes: 'Ver opiniões →',
   jogos: 'Ver agenda →',
+  sobre: 'Conhecer a proposta →',
   default: 'Acessar →',
 };
 
