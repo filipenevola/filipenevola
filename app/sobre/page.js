@@ -1,7 +1,12 @@
 import Link from 'next/link';
 import { SiteLayout } from '@/components/SiteLayout';
-import { SiteHero } from '@/components/SiteHero';
-import { PAGE_META } from '@/lib/site';
+import { PageHeader } from '@/components/PageHeader';
+import {
+  PAGE_META,
+  SITE_HEADLINE,
+  SITE_TAGLINE,
+  SITE_WHY_EXISTS,
+} from '@/lib/site';
 import { buildPageMetadata } from '@/lib/og';
 
 export const metadata = buildPageMetadata(PAGE_META.sobre);
@@ -42,22 +47,38 @@ const WE_DO = [
 export default function SobrePage() {
   return (
     <SiteLayout>
-      <SiteHero showAboutLink={false} />
+      <PageHeader
+        title="Sobre"
+        description={SITE_TAGLINE}
+      />
 
-      <div className="prose-palmeiras space-y-12 text-palmeiras-muted">
+      <section className="mb-12 rounded-2xl border border-palmeiras-light/40 bg-palmeiras-dark/50 px-6 py-8 md:px-10">
+        <p className="text-xs font-semibold uppercase tracking-widest text-palmeiras-muted">
+          Nossa proposta
+        </p>
+        <p className="mt-3 text-xl font-bold text-white md:text-2xl">{SITE_HEADLINE}</p>
+      </section>
+
+      <div className="space-y-12 text-palmeiras-muted">
         <section>
           <h2 className="text-xl font-semibold text-white md:text-2xl">
-            Para quem é este site
+            {SITE_WHY_EXISTS.title}
+          </h2>
+          <div className="mt-5 space-y-4 leading-relaxed">
+            {SITE_WHY_EXISTS.paragraphs.map((paragraph) => (
+              <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-white md:text-2xl">
+            Para quem é
           </h2>
           <p className="mt-4 leading-relaxed">
-            Este site é para o torcedor palmeirense que ama o Verdão de verdade —
-            e quer acompanhar o clube com tranquilidade. Você pode ser apaixonado
-            sem ser refém de humor de internet, de comentarista barulhento ou de
-            onda de pânico a cada rodada.
-          </p>
-          <p className="mt-4 leading-relaxed">
-            Aqui a torcida não precisa escolher entre “só felicidade fake” e “só
-            sofrimento nobre”. Existe um meio-termo saudável:{' '}
+            Para o torcedor palmeirense apaixonado que quer acompanhar o clube com
+            tranquilidade — sem escolher entre “só felicidade fake” e “só sofrimento
+            nobre”. O meio-termo saudável:{' '}
             <strong className="font-medium text-white">
               informado, engajado e emocionalmente estável
             </strong>
@@ -117,16 +138,13 @@ export default function SobrePage() {
           </h2>
           <p className="mt-4 leading-relaxed">
             Futebol é paixão — e paixão pode caber na vida sem virar drama diário.
-            Este projeto nasceu da vontade de acompanhar o Palmeiras com alegria
-            sustentável: saber o que está acontecendo, ter opinião formada, não
-            perder um jogo — e fechar o notebook ou o app sem aquela angústia que
-            não ajuda ninguém.
+            Fechar o app depois de ler uma notícia ou ver a escalação não precisa
+            deixar aquele nó no estômago que não ajuda ninguém.
           </p>
           <p className="mt-4 leading-relaxed">
-            Somos site de torcedor, não oficial do clube. Independentes,
-            transparentes e com humor contido. Se isso combina com você,{' '}
+            Se isso combina com você, explore a{' '}
             <Link href="/" className="text-white underline hover:text-palmeiras-muted">
-              explore a timeline
+              timeline
             </Link>
             , as{' '}
             <Link href="/noticias" className="text-white underline hover:text-palmeiras-muted">
