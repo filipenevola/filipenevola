@@ -18,11 +18,19 @@ export async function GET(request) {
 
   const { searchParams } = new URL(request.url);
   const type = searchParams.get('type') || undefined;
+  const status = searchParams.get('status') || undefined;
   const includeDrafts = searchParams.get('includeDrafts') === 'true';
   const limit = Math.min(Number(searchParams.get('limit')) || 100, 200);
 
+  if (status && status !== 'draft' && status !== 'published') {
+    return Response.json(
+      { error: 'ValidationError', message: 'status deve ser "draft" ou "published".' },
+      { status: 400 }
+    );
+  }
+
   try {
-    const posts = await listPosts({ type, includeDrafts, limit });
+    const posts = await listPosts({ type, status, includeDrafts, limit });
     return Response.json({ posts, count: posts.length });
   } catch (error) {
     console.error('GET /api/posts', error);

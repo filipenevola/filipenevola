@@ -18,7 +18,7 @@ const SEED_POSTS = [
     sourceUrl: '',
     content: '',
     publishedAt: '2026-05-20T14:00:00.000Z',
-    isDraft: false,
+    status: "published",
   },
   {
     type: 'noticia',
@@ -29,7 +29,7 @@ const SEED_POSTS = [
     sourceUrl: '',
     content: '',
     publishedAt: '2026-05-19T10:30:00.000Z',
-    isDraft: false,
+    status: "published",
   },
   {
     type: 'opiniao',
@@ -39,7 +39,7 @@ const SEED_POSTS = [
     mediaType: 'text',
     content: '',
     publishedAt: '2026-05-20T09:00:00.000Z',
-    isDraft: false,
+    status: "published",
   },
   {
     type: 'opiniao',
@@ -50,7 +50,7 @@ const SEED_POSTS = [
     videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
     content: '',
     publishedAt: '2026-05-18T20:00:00.000Z',
-    isDraft: false,
+    status: "published",
   },
 ];
 

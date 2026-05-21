@@ -43,44 +43,43 @@ http://localhost:4000
 | Campo | Tipo | Obrigatório | Descrição |
 |-------|------|-------------|-----------|
 | `type` | `"noticia"` \| `"opiniao"` | sim (criação) | Tipo do post; não pode mudar depois |
+| `status` | `"draft"` \| `"published"` | não | Padrão na criação: **`draft`**. Só `published` aparece no site |
 | `slug` | string | não | URL amigável; gerado do `title` se omitido |
 | `title` | string | sim | Título |
 | `summary` | string | não | Resumo / lead |
 | `content` | string | não | HTML ou texto completo |
 | `publishedAt` | ISO 8601 | não | Padrão: agora |
-| `isDraft` | boolean | não | `true` = não aparece no site |
 | `sourceName` | string | notícia | Nome da fonte |
 | `sourceUrl` | string | notícia | Link da matéria original |
 | `mediaType` | `"text"` \| `"video"` | opinião | Padrão: `text` |
 | `videoUrl` | string | opinião vídeo | Obrigatório se `mediaType` = `video` |
 
+**Visibilidade no site:** apenas posts com `status: "published"` entram na home, listagens e páginas `/noticias/*` e `/opinioes/*`.
+
+Compatibilidade: `isDraft: true` equivale a `status: "draft"`; `isDraft: false` equivale a `published` (aceito na API, mas prefira `status`).
+
 Índice único: `{ type, slug }`.
-
-Páginas públicas:
-
-- Notícia → `/noticias/{slug}`
-- Opinião → `/opinioes/{slug}`
 
 ## Endpoints
 
 ### Listar posts
 
 ```http
-GET /api/posts?type=noticia&includeDrafts=false&limit=50
+GET /api/posts?type=noticia&status=draft&limit=50
 ```
 
-Resposta `200`:
+Query params:
 
-```json
-{
-  "posts": [ { "_id": "...", "type": "noticia", "slug": "...", "title": "..." } ],
-  "count": 1
-}
-```
+| Param | Descrição |
+|-------|-----------|
+| `type` | `noticia` ou `opiniao` |
+| `status` | `draft` ou `published` (só retorna esse status) |
+| `includeDrafts` | `true` = lista rascunhos **e** publicados |
+| `limit` | máx. 200 |
 
-`type` opcional: `noticia` ou `opiniao`.
+Sem `status` nem `includeDrafts`, a listagem da API retorna só **publicados** (igual ao site).
 
-### Criar / publicar
+### Criar (rascunho ou publicado)
 
 ```http
 POST /api/posts
@@ -88,48 +87,43 @@ Content-Type: application/json
 Authorization: Bearer <token>
 ```
 
-**Notícia:**
+**Rascunho (não aparece no site):**
 
 ```json
 {
   "type": "noticia",
+  "status": "draft",
+  "title": "Matéria em revisão",
+  "summary": "Texto ainda não publicado."
+}
+```
+
+**Publicar direto:**
+
+```json
+{
+  "type": "noticia",
+  "status": "published",
   "title": "Palmeiras anuncia amistoso",
   "summary": "Jogo de pré-temporada na próxima semana.",
   "sourceName": "Palmeiras Online",
-  "sourceUrl": "https://exemplo.com/materia",
-  "content": "<p>Texto opcional</p>",
-  "isDraft": false
+  "sourceUrl": "https://exemplo.com/materia"
 }
 ```
+
+Se omitir `status`, o padrão é **`draft`**.
 
 **Opinião (texto):**
 
 ```json
 {
   "type": "opiniao",
+  "status": "published",
   "title": "Por que o meio-campo funcionou",
   "summary": "Leitura tática após o clássico.",
   "mediaType": "text",
   "content": "<p>Análise...</p>"
 }
-```
-
-**Opinião (vídeo):**
-
-```json
-{
-  "type": "opiniao",
-  "title": "Resumo da semana em vídeo",
-  "summary": "5 minutos de destaques.",
-  "mediaType": "video",
-  "videoUrl": "https://www.youtube.com/watch?v=VIDEO_ID"
-}
-```
-
-Resposta `201`:
-
-```json
-{ "post": { "_id": "674a...", "type": "noticia", "slug": "...", ... } }
 ```
 
 ### Obter um post
@@ -138,21 +132,18 @@ Resposta `201`:
 GET /api/posts/{id}?includeDrafts=true
 ```
 
-### Editar
+Com `includeDrafts=true` é possível ler rascunhos pelo id.
+
+### Editar / publicar rascunho
 
 ```http
 PATCH /api/posts/{id}
-Content-Type: application/json
-Authorization: Bearer <token>
 ```
-
-Corpo parcial (apenas campos a alterar):
 
 ```json
 {
-  "title": "Novo título",
-  "summary": "Resumo atualizado",
-  "isDraft": false
+  "title": "Título revisado",
+  "status": "published"
 }
 ```
 
@@ -160,37 +151,20 @@ Corpo parcial (apenas campos a alterar):
 
 ```http
 DELETE /api/posts/{id}
-Authorization: Bearer <token>
 ```
 
-Resposta `200`:
+## Fluxo recomendado para IA
 
-```json
-{ "deleted": true, "id": "674a..." }
-```
-
-## Códigos de erro
-
-| Status | Significado |
-|--------|-------------|
-| `401` | Token ausente ou inválido |
-| `400` | Validação (slug duplicado, campos obrigatórios) |
-| `404` | Post não encontrado |
-| `503` | `POSTS_API_SECRET` não configurado no servidor |
+1. `POST /api/posts` com `"status": "draft"` — criar sem expor no site.
+2. `PATCH /api/posts/{id}` — revisar conteúdo.
+3. `PATCH` com `"status": "published"` — publicar.
+4. `GET /api/posts?status=draft` — listar rascunhos pendentes.
+5. `DELETE /api/posts/{id}` — remover.
 
 ## Seed inicial
-
-Para popular o banco com dados de exemplo (coleções `posts` e `jogos`):
 
 ```bash
 MONGODB_URI="mongodb+srv://..." npm run seed
 ```
 
-## Fluxo recomendado para IA
-
-1. `GET /api/posts?type=noticia` — verificar slugs existentes.
-2. `POST /api/posts` — publicar com `isDraft: true` se quiser revisar antes.
-3. `PATCH /api/posts/{id}` — ajustar texto ou `isDraft: false` para publicar.
-4. `DELETE /api/posts/{id}` — remover conteúdo incorreto.
-
-Após publicar, o item aparece na home (timeline) com ícone de notícia ou opinião conforme o `type`.
+O seed grava posts com `status: "published"`.
