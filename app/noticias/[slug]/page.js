@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SiteLayout } from '@/components/SiteLayout';
 import { getNoticiaBySlug, getNoticias, formatDateTime } from '@/lib/mongodb';
-import { buildOgImageUrl, buildPageMetadata } from '@/lib/og';
+import { buildPageMetadata } from '@/lib/og';
 
 export async function generateStaticParams() {
   const noticias = await getNoticias();
@@ -52,7 +52,7 @@ export default async function NoticiaPage({ params }) {
 
       <article>
         <p className="text-xs font-medium uppercase tracking-wide text-palmeiras-muted">
-          {noticia.sourceName || 'Crawler IA'}
+          {noticia.sourceName || 'Fonte externa'}
         </p>
         <time className="mt-2 block text-sm text-palmeiras-muted" dateTime={noticia.publishedAt}>
           {formatDateTime(noticia.publishedAt)}
@@ -64,8 +64,7 @@ export default async function NoticiaPage({ params }) {
 
         <div className="mt-8 rounded-xl border border-dashed border-palmeiras-light/50 bg-palmeiras-darker/40 p-6 text-sm text-palmeiras-muted">
           <p>
-            Corpo completo da notícia virá do crawler. Este é um esqueleto da página de
-            detalhe.
+            O texto completo desta matéria será exibido aqui em breve.
           </p>
           {noticia.sourceUrl && (
             <a

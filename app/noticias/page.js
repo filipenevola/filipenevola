@@ -15,11 +15,11 @@ export default async function NoticiasPage() {
     <SiteLayout>
       <PageHeader
         title="Notícias"
-        description="Conteúdo agregado automaticamente por crawler com IA. Fontes externas serão creditadas em cada matéria."
+        description="O que está sendo dito sobre o Palmeiras, reunido com critério editorial. Cada matéria indica a fonte original."
       />
 
       {noticias.length === 0 ? (
-        <EmptyState message="O crawler ainda não publicou notícias. Configure a integração em breve." />
+        <EmptyState message="Nenhuma notícia publicada no momento. Volte em breve." />
       ) : (
         <ul className="flex flex-col gap-4">
           {noticias.map((noticia) => (
@@ -29,7 +29,7 @@ export default async function NoticiasPage() {
                 title={noticia.title}
                 summary={noticia.summary}
                 publishedAt={noticia.publishedAt}
-                badge={noticia.sourceName || 'Crawler IA'}
+                badge={noticia.sourceName || 'Fonte externa'}
               />
             </li>
           ))}

@@ -38,7 +38,7 @@ const WE_DONT = [
 ];
 
 const WE_DO = [
-  'Reunir notícias com critério editorial (crawler + curadoria)',
+  'Reunir notícias sobre o Verdão com critério editorial',
   'Publicar opiniões e vídeos no nosso tom: claro, direto, sem gritaria',
   'Manter a agenda de jogos organizada, com calendário útil',
   'Lembrar que torcer pode ser leve, informado e prazeroso',

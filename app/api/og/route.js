@@ -20,7 +20,7 @@ const gradients = {
 
 const defaultSubtitles = {
   inicio: 'Torcida equilibrada: otimista, realista e sem drama.',
-  noticias: 'Notícias com critério — sem alarmismo nem clickbait.',
+  noticias: 'Notícias selecionadas com critério — sem alarmismo.',
   opinioes: 'Opiniões ponderadas, sem gritaria de torcida.',
   jogos: 'Próximos jogos, resultados e Google Calendar.',
   sobre: 'Site de torcedor: pé no chão, sem chiliquismo nem sensacionalismo.',
