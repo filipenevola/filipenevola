@@ -5,7 +5,7 @@ export function SiteHero({ showAboutLink = true }) {
   return (
     <section className="mb-10 rounded-2xl border border-palmeiras-light/40 bg-palmeiras-dark/50 px-6 py-8 md:px-10 md:py-10">
       <p className="text-xs font-semibold uppercase tracking-widest text-palmeiras-muted">
-        Experiência emocional saudável
+        Torcer com equilíbrio
       </p>
       <h1 className="mt-3 text-2xl font-bold leading-tight text-white md:text-4xl">
         {SITE_HEADLINE}

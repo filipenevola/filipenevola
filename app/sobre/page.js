@@ -39,7 +39,7 @@ const WE_DONT = [
 ];
 
 const WE_DO = [
-  'Oferecer uma forma mais saudável de viver o Palmeiras no emocional',
+  'Oferecer uma forma mais saudável de torcer para o Palmeiras',
   'Reunir notícias sobre o Verdão com critério editorial',
   'Publicar opiniões e vídeos no nosso tom: claro, direto, sem gritaria',
   'Manter a agenda de jogos organizada, com calendário útil',
@@ -84,8 +84,8 @@ export default function SobrePage() {
             <strong className="font-medium text-white">
               informado, engajado e emocionalmente estável
             </strong>
-            . É isso que significa viver o Verdão de um jeito mais saudável no
-            emocional.
+            . É isso que significa torcer para o Palmeiras de um jeito mais
+            saudável.
           </p>
         </section>
 
