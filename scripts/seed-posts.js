@@ -5,7 +5,7 @@
 
 import { MongoClient } from 'mongodb';
 
-const DB_NAME = 'palmeirasapp';
+const DB_NAME = 'verdaoracional';
 
 const SEED_POSTS = [
   {

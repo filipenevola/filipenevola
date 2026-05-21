@@ -1,6 +1,6 @@
-# API de posts (Palmeiras App)
+# API de posts (verdaoracional)
 
-Documentação para agentes de IA publicarem, editarem e excluírem conteúdo no MongoDB (`palmeirasapp.posts`).
+Documentação para agentes de IA publicarem, editarem e excluírem conteúdo no MongoDB (`verdaoracional.posts`).
 
 ## Autenticação
 
@@ -29,7 +29,7 @@ X-API-Token: <POSTS_API_SECRET>
 Produção:
 
 ```text
-https://palmeirasapp-production-filipenevola.svc-us5.zcloud.ws
+https://verdaoracional.com
 ```
 
 Local:

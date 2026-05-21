@@ -10,7 +10,7 @@ export function SiteLayout({ children }) {
       </div>
       <footer className="border-t border-palmeiras-light/30 py-8 text-center text-sm text-palmeiras-muted">
         <p>
-          Palmeiras App — conteúdo não oficial do clube.{' '}
+          verdaoracional — conteúdo não oficial do Palmeiras.{' '}
           <Link href="/sobre" className="text-white underline hover:text-palmeiras-muted">
             Nossa proposta
           </Link>
