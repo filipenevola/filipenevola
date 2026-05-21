@@ -4,6 +4,7 @@ import { PageHeader } from '@/components/PageHeader';
 import {
   PAGE_META,
   SITE_HEADLINE,
+  SITE_MISSION,
   SITE_TAGLINE,
   SITE_WHY_EXISTS,
 } from '@/lib/site';
@@ -21,8 +22,8 @@ const PRINCIPLES = [
     body: 'Acreditamos no elenco e no projeto do clube, mas sem prometer título todo ano nem enterro após um tropeço.',
   },
   {
-    title: 'Sem chiliquismo',
-    body: 'Nada de “urgência” fabricada, bastidor inventado ou clique em cima do nervosismo da torcida.',
+    title: 'Emoção saudável',
+    body: 'Paixão sim, drama diário não. Torcer pode ser intenso sem virar sofrimento compulsório ou pânico fabricado.',
   },
   {
     title: 'Sem sensacionalismo',
@@ -38,25 +39,26 @@ const WE_DONT = [
 ];
 
 const WE_DO = [
+  'Oferecer uma forma mais saudável de viver o Palmeiras no emocional',
   'Reunir notícias sobre o Verdão com critério editorial',
   'Publicar opiniões e vídeos no nosso tom: claro, direto, sem gritaria',
   'Manter a agenda de jogos organizada, com calendário útil',
-  'Lembrar que torcer pode ser leve, informado e prazeroso',
 ];
 
 export default function SobrePage() {
   return (
     <SiteLayout>
-      <PageHeader
-        title="Sobre"
-        description={SITE_TAGLINE}
-      />
+      <PageHeader title="Sobre" description={SITE_MISSION} />
 
       <section className="mb-12 rounded-2xl border border-palmeiras-light/40 bg-palmeiras-dark/50 px-6 py-8 md:px-10">
         <p className="text-xs font-semibold uppercase tracking-widest text-palmeiras-muted">
           Nossa proposta
         </p>
         <p className="mt-3 text-xl font-bold text-white md:text-2xl">{SITE_HEADLINE}</p>
+        <p className="mt-4 text-lg font-medium leading-snug text-white md:text-xl">
+          {SITE_MISSION}
+        </p>
+        <p className="mt-3 leading-relaxed text-palmeiras-muted">{SITE_TAGLINE}</p>
       </section>
 
       <div className="space-y-12 text-palmeiras-muted">
@@ -78,11 +80,12 @@ export default function SobrePage() {
           <p className="mt-4 leading-relaxed">
             Para o torcedor palmeirense apaixonado que quer acompanhar o clube com
             tranquilidade — sem escolher entre “só felicidade fake” e “só sofrimento
-            nobre”. O meio-termo saudável:{' '}
+            nobre”. Buscamos o meio-termo saudável:{' '}
             <strong className="font-medium text-white">
               informado, engajado e emocionalmente estável
             </strong>
-            .
+            . É isso que significa viver o Verdão de um jeito mais saudável no
+            emocional.
           </p>
         </section>
 
@@ -139,7 +142,9 @@ export default function SobrePage() {
           <p className="mt-4 leading-relaxed">
             Futebol é paixão — e paixão pode caber na vida sem virar drama diário.
             Fechar o app depois de ler uma notícia ou ver a escalação não precisa
-            deixar aquele nó no estômago que não ajuda ninguém.
+            deixar aquele nó no estômago que não ajuda ninguém. Essa é a experiência
+            que queremos construir:{' '}
+            <strong className="font-medium text-white">{SITE_MISSION}</strong>
           </p>
           <p className="mt-4 leading-relaxed">
             Se isso combina com você, explore a{' '}

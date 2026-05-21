@@ -3,12 +3,12 @@ import { SiteHero } from '@/components/SiteHero';
 import { TimelineItem } from '@/components/TimelineItem';
 import { EmptyState } from '@/components/EmptyState';
 import { getTimeline } from '@/lib/data/timeline';
-import { PAGE_META, SITE_HEADLINE, SITE_TAGLINE } from '@/lib/site';
+import { PAGE_META, SITE_HEADLINE, SITE_MISSION } from '@/lib/site';
 import { buildPageMetadata } from '@/lib/og';
 
 export const metadata = buildPageMetadata({
   title: SITE_HEADLINE,
-  description: SITE_TAGLINE,
+  description: SITE_MISSION,
   ogType: PAGE_META.inicio.ogType,
   badge: PAGE_META.inicio.badge,
   path: '/',
