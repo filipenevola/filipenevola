@@ -10,15 +10,22 @@ This file contains Quave Cloud identifiers for this project, used by MCP tools.
 | **Account Name** | filipenevola |
 | **Slug** | filipenevola |
 
-## App Environment (Production)
+## App Environment (Palmeiras App — Production)
 
 | Field | Value |
 |-------|-------|
-| **App Env ID** | `cgY2ZqNrm5uFb2ziE` |
-| **App ID** | `c4XKeK7bvLXJxoAEP` |
+| **App Env ID** | `s7mze9j3xcTSuQDNz` |
+| **App ID** | `cCXoZpvtXnG4xrbxe` |
 | **Environment Name** | production |
 | **Region** | us-5 |
-| **Git Branch** | main |
-| **CLI Env Name** | filipenevola-filipenevola-production |
-| **Hosts** | filipenevola.com, www.filipenevola.com |
+| **Git Branch** | cli |
+| **CLI Env Name** | filipenevola-palmeirasapp-production |
+| **Hosts** | palmeirasapp-production-filipenevola.svc-us5.zcloud.ws |
 
+## GitHub Actions Deploy
+
+| Field | Value |
+|-------|-------|
+| **Workflow** | `.github/workflows/deploy.yml` |
+| **Secret** | `QUAVE_ONE_PROD_TOKEN` |
+| **Env** | `filipenevola-palmeirasapp-production` |
