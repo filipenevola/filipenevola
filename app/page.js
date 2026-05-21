@@ -18,11 +18,11 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col space-y-4">
-          <p className="text-neutral-300">
+          <p className="text-palmeiras-muted">
             I'm Filipe Névola. I'm a developer and entrepreneur focused on execution and sustainable growth.
             
           </p>
-          <p className="text-neutral-300">
+          <p className="text-palmeiras-muted">
             Building{' '}
             <a href="https://quave.one" className="underline text-white hover:text-neutral-400">
               Quave ONE
@@ -37,24 +37,24 @@ export default function Home() {
             </a>{' '}
             (Premium Yerba Mate).
           </p>
-          <p className="text-neutral-300">
+          <p className="text-palmeiras-muted">
           <a href="https://quaveholdings.com" className="underline text-white hover:text-neutral-400">
               Quave Holdings
             </a>
             ' CEO.
           </p>
-          <p className="text-neutral-300">
+          <p className="text-palmeiras-muted">
             Read my latest articles in my{' '}
             <a href="/blog" className="underline text-white hover:text-neutral-400">
               blog
             </a>
             .
           </p>
-          <div className="text-neutral-300">
+          <div className="text-palmeiras-muted">
             <NewsletterCTA variant="inline-standalone" />
           </div>
           <div className="font-semibold pt-4 text-white">X Threads</div>
-          <ul className="space-y-2 text-neutral-300">
+          <ul className="space-y-2 text-palmeiras-muted">
             <li>
               <a
                 href="https://twitter.com/search?q=%23quaveDev%20from%3Afilipenevola&src=typed_query"

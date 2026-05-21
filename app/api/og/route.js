@@ -2,22 +2,19 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
-// Personal brand colors - black/neutral/white theme
+// Palmeiras Futebol Clube brand colors (#006437 official green)
 const colors = {
-  // Backgrounds (pure black and neutral grays)
-  bgPrimary: '#000000',
-  bgSecondary: '#0a0a0a',
-  bgCard: '#262626',
-  bgCardBorder: '#404040',
-  // Text colors (neutral palette)
-  textPrimary: '#f5f5f5',
-  textSecondary: '#d4d4d4',
-  textMuted: '#737373',
+  bgPrimary: '#006437',
+  bgSecondary: '#004d2a',
+  bgCard: '#003320',
+  bgCardBorder: '#00804a',
+  textPrimary: '#ffffff',
+  textSecondary: '#e8f5ec',
+  textMuted: '#c8e6d4',
   textHeading: '#ffffff',
-  // Accent (white/light gray for monochrome look)
   accent: '#ffffff',
-  accentHover: '#e5e5e5',
-  accentMuted: '#a3a3a3',
+  accentHover: '#e8f5ec',
+  accentMuted: '#b8dcc4',
 };
 
 // Gradients

@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-palmeiras: #006437;
+  --color-palmeiras-dark: #004d2a;
+  --color-palmeiras-darker: #003320;
+  --color-palmeiras-light: #00804a;
+  --color-palmeiras-muted: #c8e6d4;
+}
+
 /*
   The default border color has changed to `currentcolor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -19,8 +27,7 @@
 }
 
 @utility blog-content {
-  /* Blog content styles */
-  @apply text-neutral-300;
+  color: var(--color-palmeiras-muted);
 
   & h1 {
     @apply pt-6 text-3xl leading-9 font-medium text-white;
@@ -39,11 +46,13 @@
   }
 
   & hr {
-    @apply my-4 border-neutral-600;
+    border-color: var(--color-palmeiras-light);
+    @apply my-4;
   }
 
   & p {
-    @apply my-4 leading-7 text-neutral-300;
+    color: var(--color-palmeiras-muted);
+    @apply my-4 leading-7;
   }
 
   & p img {
@@ -51,15 +60,21 @@
   }
 
   & a {
-    @apply text-white hover:text-neutral-400 underline;
+    @apply text-white underline;
+  }
+
+  & a:hover {
+    color: var(--color-palmeiras-muted);
   }
 
   & ul {
-    @apply block list-disc my-4 pl-8 text-neutral-300;
+    color: var(--color-palmeiras-muted);
+    @apply block list-disc my-4 pl-8;
   }
 
   & ol {
-    @apply block list-decimal my-4 pl-8 text-neutral-300;
+    color: var(--color-palmeiras-muted);
+    @apply block list-decimal my-4 pl-8;
   }
 
   & li {
@@ -67,19 +82,22 @@
   }
 
   & pre {
-    @apply bg-neutral-800 py-4 px-4 my-4 rounded-lg overflow-x-auto;
+    background-color: var(--color-palmeiras-darker);
+    @apply py-4 px-4 my-4 rounded-lg overflow-x-auto;
   }
 
   & code {
-    @apply text-neutral-200 font-mono text-sm;
+    @apply text-white font-mono text-sm;
   }
 
   & pre code {
-    @apply text-neutral-300;
+    color: var(--color-palmeiras-muted);
   }
 
   & blockquote {
-    @apply border-l-4 border-neutral-500 pl-4 my-4 italic text-neutral-400;
+    border-color: var(--color-palmeiras-light);
+    color: var(--color-palmeiras-muted);
+    @apply border-l-4 pl-4 my-4 italic;
   }
 
   & strong {
@@ -94,16 +112,14 @@
     @apply w-full my-4 border-collapse;
   }
 
-  & th {
-    @apply border border-neutral-600 px-4 py-2 text-left;
-  }
-
+  & th,
   & td {
-    @apply border border-neutral-600 px-4 py-2 text-left;
+    border-color: var(--color-palmeiras-light);
+    @apply border px-4 py-2 text-left;
   }
 
   & th {
-    @apply bg-neutral-800 font-medium text-white;
+    background-color: var(--color-palmeiras-darker);
+    @apply font-medium text-white;
   }
 }
-

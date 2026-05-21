@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import PostPage from './PostPage';
-import { getBlogPosts, getPost, getOriginal } from '@/lib/mongodb';
+import { getBlogPosts, getPost } from '@/lib/mongodb';
 
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
@@ -12,7 +12,6 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = await getPost({ slug });
-  const original = await getOriginal();
 
   if (!post) {
     return {
@@ -21,9 +20,8 @@ export async function generateMetadata({ params }) {
   }
 
   const title = `${post.subject} | Blog`;
-  const description = post.preHeader || original?.description || '';
+  const description = post.preHeader || '';
 
-  // Build OG image URL with URL-encoded parameters
   const ogImageParams = new URLSearchParams({
     type: 'blog',
     title: post.subject,
@@ -32,8 +30,6 @@ export async function generateMetadata({ params }) {
   });
   if (post.preHeader) {
     ogImageParams.set('subtitle', post.preHeader);
-  } else if (description) {
-    ogImageParams.set('subtitle', description);
   }
   const ogImageUrl = `/api/og?${ogImageParams.toString()}`;
 

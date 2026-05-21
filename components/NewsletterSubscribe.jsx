@@ -10,7 +10,7 @@ export function NewsletterLink({ children, className }) {
     <>
       <button
         onClick={() => setIsModalOpen(true)}
-        className={className || 'underline text-white hover:text-neutral-400 transition-colors cursor-pointer'}
+        className={className || 'underline text-white hover:text-palmeiras-muted transition-colors cursor-pointer'}
       >
         {children || 'Subscribe'}
       </button>
@@ -28,14 +28,14 @@ export function NewsletterCTA({ variant = 'default' }) {
   if (variant === 'post-footer') {
     return (
       <>
-        <div className="mt-12 pt-8 border-t border-neutral-700">
+        <div className="mt-12 pt-8 border-t border-palmeiras-light">
           <div className="text-center">
-            <p className="text-neutral-300 mb-4">
+            <p className="text-palmeiras-muted mb-4">
               Did you enjoy this post? Get more like this delivered to your inbox.
             </p>
             <button
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-neutral-900 rounded-lg font-medium hover:bg-neutral-200 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-palmeiras rounded-lg font-medium hover:bg-palmeiras-muted transition-colors cursor-pointer"
             >
               Subscribe to newsletter
             </button>
@@ -52,11 +52,11 @@ export function NewsletterCTA({ variant = 'default' }) {
   if (variant === 'inline') {
     return (
       <>
-        <span className="text-neutral-400">
+        <span className="text-palmeiras-muted">
           {' · '}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="text-white hover:text-neutral-400 transition-colors underline cursor-pointer"
+            className="text-white hover:text-palmeiras-muted transition-colors underline cursor-pointer"
           >
             (subscribe)
           </button>
@@ -74,7 +74,7 @@ export function NewsletterCTA({ variant = 'default' }) {
       <>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="text-white hover:text-neutral-400 transition-colors underline cursor-pointer"
+          className="text-white hover:text-palmeiras-muted transition-colors underline cursor-pointer"
         >
           Get updates via newsletter
         </button>
@@ -86,12 +86,11 @@ export function NewsletterCTA({ variant = 'default' }) {
     );
   }
 
-  // default variant
   return (
     <>
       <button
         onClick={() => setIsModalOpen(true)}
-        className="text-neutral-300 hover:text-white transition-colors underline cursor-pointer"
+        className="text-palmeiras-muted hover:text-white transition-colors underline cursor-pointer"
       >
         Subscribe
       </button>

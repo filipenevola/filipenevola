@@ -5,7 +5,7 @@ import { createPortal } from 'react-dom';
 
 export function NewsletterModal({ isOpen, onClose }) {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('idle'); // idle, loading, success, error
+  const [status, setStatus] = useState('idle');
   const [errorMessage, setErrorMessage] = useState('');
   const [mounted, setMounted] = useState(false);
 
@@ -67,14 +67,14 @@ export function NewsletterModal({ isOpen, onClose }) {
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-palmeiras-darker/80 backdrop-blur-sm" />
       <div
-        className="relative bg-neutral-900 border border-neutral-700 rounded-xl p-6 w-full max-w-md shadow-2xl"
+        className="relative bg-palmeiras-dark border border-palmeiras-light rounded-xl p-6 w-full max-w-md shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors"
+          className="absolute top-4 right-4 text-palmeiras-muted hover:text-white transition-colors"
           aria-label="Close"
         >
           <svg
@@ -99,13 +99,13 @@ export function NewsletterModal({ isOpen, onClose }) {
             <h3 className="text-xl font-semibold text-white mb-2">
               You're subscribed!
             </h3>
-            <p className="text-neutral-400">
+            <p className="text-palmeiras-muted">
               Thanks for subscribing. You'll receive updates on new posts and
               insights.
             </p>
             <button
               onClick={onClose}
-              className="mt-6 px-6 py-2 bg-white text-neutral-900 rounded-lg font-medium hover:bg-neutral-200 transition-colors"
+              className="mt-6 px-6 py-2 bg-white text-palmeiras rounded-lg font-medium hover:bg-palmeiras-muted transition-colors"
             >
               Close
             </button>
@@ -115,7 +115,7 @@ export function NewsletterModal({ isOpen, onClose }) {
             <h3 className="text-xl font-semibold text-white mb-2">
               Subscribe to my newsletter
             </h3>
-            <p className="text-neutral-400 mb-6">
+            <p className="text-palmeiras-muted mb-6">
               Get notified about new blog posts, insights on software
               development, entrepreneurship, and building products.
             </p>
@@ -127,23 +127,23 @@ export function NewsletterModal({ isOpen, onClose }) {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
                 required
-                className="w-full px-4 py-3 bg-neutral-800 border border-neutral-600 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-neutral-400 transition-colors"
+                className="w-full px-4 py-3 bg-palmeiras-darker border border-palmeiras-light rounded-lg text-white placeholder-palmeiras-muted/60 focus:outline-none focus:border-white transition-colors"
               />
 
               {status === 'error' && (
-                <p className="mt-2 text-red-400 text-sm">{errorMessage}</p>
+                <p className="mt-2 text-red-300 text-sm">{errorMessage}</p>
               )}
 
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full mt-4 px-6 py-3 bg-white text-neutral-900 rounded-lg font-medium hover:bg-neutral-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full mt-4 px-6 py-3 bg-white text-palmeiras rounded-lg font-medium hover:bg-palmeiras-muted transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
               </button>
             </form>
 
-            <p className="mt-4 text-neutral-500 text-xs text-center">
+            <p className="mt-4 text-palmeiras-muted/80 text-xs text-center">
               No spam, unsubscribe anytime.
             </p>
           </>

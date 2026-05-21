@@ -12,23 +12,23 @@ export default async function BlogPage() {
         <div className="mb-8 flex justify-between items-center">
           <Link
             href="/"
-            className="text-white hover:text-neutral-400 transition-colors"
+            className="text-white hover:text-palmeiras-muted transition-colors"
           >
             &larr; Back to Home
           </Link>
-          <NewsletterLink className="text-sm text-neutral-400 hover:text-white transition-colors cursor-pointer">
+          <NewsletterLink className="text-sm text-palmeiras-muted hover:text-white transition-colors cursor-pointer">
             Subscribe to updates
           </NewsletterLink>
         </div>
 
         <h1 className="text-2xl font-semibold mb-4 text-white">Blog</h1>
-        <p className="text-neutral-400 mb-8">
+        <p className="text-palmeiras-muted mb-8">
           Thoughts on software development, entrepreneurship, and building
           products.
         </p>
 
         {posts.length === 0 ? (
-          <p className="text-neutral-400">No posts yet. Check back soon!</p>
+          <p className="text-palmeiras-muted">No posts yet. Check back soon!</p>
         ) : (
           <ul className="flex flex-col gap-6">
             {posts.map(function renderPost({
@@ -40,17 +40,17 @@ export default async function BlogPage() {
             }) {
               return (
                 <li key={_id} className="flex flex-col items-start gap-1">
-                  <small className="text-neutral-500 text-sm">
+                  <small className="text-palmeiras-muted/80 text-sm">
                     {formatDateTime(publishedAt)}
                   </small>
                   <Link
-                    className="text-lg text-white hover:text-neutral-400 transition-colors"
+                    className="text-lg text-white hover:text-palmeiras-muted transition-colors"
                     href={`/blog/${slug}`}
                   >
                     {subject}
                   </Link>
                   {preHeader && (
-                    <p className="text-neutral-400 text-sm">{preHeader}</p>
+                    <p className="text-palmeiras-muted text-sm">{preHeader}</p>
                   )}
                 </li>
               );
