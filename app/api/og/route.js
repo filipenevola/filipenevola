@@ -1,203 +1,51 @@
 import { ImageResponse } from 'next/og';
+import { SITE_NAME } from '@/lib/site';
 
 export const runtime = 'edge';
 
-// Palmeiras Futebol Clube brand colors (#006437 official green)
 const colors = {
   bgPrimary: '#006437',
   bgSecondary: '#004d2a',
   bgCard: '#003320',
-  bgCardBorder: '#00804a',
+  accent: '#ffffff',
   textPrimary: '#ffffff',
   textSecondary: '#e8f5ec',
   textMuted: '#c8e6d4',
-  textHeading: '#ffffff',
-  accent: '#ffffff',
-  accentHover: '#e8f5ec',
-  accentMuted: '#b8dcc4',
 };
 
-// Gradients
 const gradients = {
   background: `linear-gradient(135deg, ${colors.bgPrimary} 0%, ${colors.bgSecondary} 100%)`,
-  accent: `linear-gradient(90deg, ${colors.accentMuted}, ${colors.textPrimary}, ${colors.accent})`,
+  accent: `linear-gradient(90deg, ${colors.textMuted}, ${colors.textPrimary}, ${colors.accent})`,
 };
 
-// Default CTAs per type
-const defaultCTAs = {
-  default: 'Learn More →',
-  blog: 'Read Article →',
+const defaultSubtitles = {
+  inicio: 'Notícias, opiniões e agenda de jogos do Verdão.',
+  noticias: 'Notícias reunidas por crawler com inteligência artificial.',
+  opinioes: 'Textos e vídeos próprios sobre o Palmeiras.',
+  jogos: 'Próximos jogos, resultados e Google Calendar.',
+  default: 'Notícias, opiniões e jogos do Palmeiras.',
 };
 
-/**
- * OG Image Generator for Filipe Névola's personal site
- *
- * Query Parameters:
- * - title: Main title text (default: 'Filipe Névola')
- * - subtitle: Subtitle text
- * - type: 'default' | 'blog' (default: 'default')
- * - badge: Badge text (for blog type)
- * - cta: Call-to-action text (optional, has contextual defaults per type)
- *
- * Blog specific parameters (when type=blog):
- * - subtitle: Blog post description or excerpt
- * - badge: Optional badge (e.g., 'Blog', 'Article', 'Newsletter')
- * - Default CTA: 'Read Article →'
- *
- * Example URLs:
- * /api/og?title=Filipe%20Névola (default)
- * /api/og?type=blog&title=Blog&subtitle=Thoughts%20on%20software%20development&badge=Blog&cta=Read%20Latest%20Posts%20→
- * /api/og?type=blog&title=My%20Post%20Title&subtitle=Post%20description&badge=Blog%20Post
- */
+const defaultCtas = {
+  inicio: 'Ver timeline →',
+  noticias: 'Ler notícias →',
+  opinioes: 'Ver opiniões →',
+  jogos: 'Ver agenda →',
+  default: 'Acessar →',
+};
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
-  const title = searchParams.get('title') || 'Filipe Névola';
   const type = searchParams.get('type') || 'default';
-  const badge = searchParams.get('badge') || '';
-  const cta = searchParams.get('cta') || defaultCTAs[type] || defaultCTAs.default;
+  const title = searchParams.get('title') || SITE_NAME;
+  const badge = searchParams.get('badge') || type;
   const subtitle =
     searchParams.get('subtitle') ||
-    (type === 'default'
-      ? 'CEO & Developer at Quave. Building Quave ONE (Cloud Platform), Quave Services (Dev Boutique), and Erva Token (Premium Yerba Mate).'
-      : '');
+    defaultSubtitles[type] ||
+    defaultSubtitles.default;
+  const cta =
+    searchParams.get('cta') || defaultCtas[type] || defaultCtas.default;
 
-  const isBlog = type === 'blog';
-
-  // Blog OG image
-  if (isBlog) {
-    return new ImageResponse(
-      (
-        <div
-          style={{
-            height: '100%',
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-            backgroundColor: colors.bgPrimary,
-            backgroundImage: gradients.background,
-            padding: '50px 60px',
-          }}
-        >
-          {/* Top bar with brand and badge */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              width: '100%',
-              marginBottom: 50,
-            }}
-          >
-            <div
-              style={{
-                fontSize: 20,
-                fontWeight: 600,
-                color: colors.accent,
-                letterSpacing: '0.05em',
-              }}
-            >
-              FILIPE NÉVOLA
-            </div>
-            {badge && (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  background: `rgba(255, 255, 255, 0.1)`,
-                  border: `1px solid ${colors.accent}`,
-                  borderRadius: 20,
-                  padding: '8px 16px',
-                  fontSize: 14,
-                  color: colors.accent,
-                  fontWeight: 500,
-                  textTransform: 'uppercase',
-                  letterSpacing: 1,
-                }}
-              >
-                {badge}
-              </div>
-            )}
-          </div>
-
-          {/* Main content */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              flex: 1,
-              justifyContent: 'center',
-            }}
-          >
-            {/* Title */}
-            <div
-              style={{
-                fontSize: 60,
-                fontWeight: 700,
-                background: gradients.accent,
-                backgroundClip: 'text',
-                color: 'transparent',
-                lineHeight: 1.2,
-                marginBottom: 24,
-              }}
-            >
-              {title}
-            </div>
-
-            {/* Subtitle */}
-            {subtitle && (
-              <div
-                style={{
-                  fontSize: 28,
-                  color: colors.textSecondary,
-                  lineHeight: 1.4,
-                  maxWidth: '85%',
-                }}
-              >
-                {subtitle}
-              </div>
-            )}
-          </div>
-
-          {/* Bottom bar with CTA and domain */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-            }}
-          >
-            {/* CTA Button */}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                background: gradients.accent,
-                borderRadius: 8,
-                padding: '14px 28px',
-                fontSize: 18,
-                color: colors.bgPrimary,
-                fontWeight: 600,
-              }}
-            >
-              {cta}
-            </div>
-            <div
-              style={{
-                fontSize: 16,
-                color: colors.textMuted,
-              }}
-            >
-              filipenevola.com/blog
-            </div>
-          </div>
-        </div>
-      ),
-      { width: 1200, height: 630 }
-    );
-  }
-
-  // Default OG image
   return new ImageResponse(
     (
       <div
@@ -208,10 +56,9 @@ export async function GET(request) {
           flexDirection: 'column',
           backgroundColor: colors.bgPrimary,
           backgroundImage: gradients.background,
-          padding: '60px',
+          padding: '50px 60px',
         }}
       >
-        {/* Top bar with brand */}
         <div
           style={{
             display: 'flex',
@@ -223,156 +70,116 @@ export async function GET(request) {
         >
           <div
             style={{
-              fontSize: 20,
-              fontWeight: 600,
-              color: colors.accent,
-              letterSpacing: '0.05em',
-            }}
-          >
-            filipenevola.com
-          </div>
-          <div
-            style={{
               display: 'flex',
               alignItems: 'center',
-              background: `rgba(34, 211, 211, 0.1)`,
-              border: `1px solid ${colors.accent}`,
-              borderRadius: 20,
-              padding: '8px 16px',
-              fontSize: 14,
-              color: colors.accent,
-              fontWeight: 500,
+              gap: 16,
             }}
           >
-            Developer & Entrepreneur
+            <div
+              style={{
+                width: 56,
+                height: 56,
+                borderRadius: 28,
+                background: colors.bgCard,
+                border: `2px solid ${colors.accent}`,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: 28,
+              }}
+            >
+              🌿
+            </div>
+            <div
+              style={{
+                fontSize: 22,
+                fontWeight: 700,
+                color: colors.accent,
+                letterSpacing: '0.04em',
+              }}
+            >
+              {SITE_NAME.toUpperCase()}
+            </div>
           </div>
+          {badge && (
+            <div
+              style={{
+                display: 'flex',
+                background: 'rgba(255,255,255,0.12)',
+                border: `1px solid ${colors.accent}`,
+                borderRadius: 20,
+                padding: '8px 18px',
+                fontSize: 14,
+                color: colors.accent,
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: 1,
+              }}
+            >
+              {badge}
+            </div>
+          )}
         </div>
 
-        {/* Main content */}
         <div
           style={{
             display: 'flex',
+            flexDirection: 'column',
             flex: 1,
-            alignItems: 'center',
-            gap: 50,
+            justifyContent: 'center',
           }}
         >
-          {/* Profile image placeholder - circle with initials */}
           <div
             style={{
-              width: 180,
-              height: 180,
-              borderRadius: 90,
-              backgroundColor: colors.bgCard,
-              border: `3px solid ${colors.accent}`,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: 56,
+              fontSize: 58,
               fontWeight: 700,
-              color: colors.accent,
-              flexShrink: 0,
+              background: gradients.accent,
+              backgroundClip: 'text',
+              color: 'transparent',
+              lineHeight: 1.15,
+              marginBottom: 20,
+              maxWidth: '95%',
             }}
           >
-            FN
+            {title.length > 80 ? `${title.slice(0, 77)}...` : title}
           </div>
-
-          {/* Text content */}
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              flex: 1,
-            }}
-          >
-            {/* Title with gradient */}
-            <div
-              style={{
-                fontSize: 64,
-                fontWeight: 700,
-                background: gradients.accent,
-                backgroundClip: 'text',
-                color: 'transparent',
-                lineHeight: 1.1,
-                marginBottom: 24,
-              }}
-            >
-              {title}
-            </div>
-
-            {/* Subtitle */}
+          {subtitle && (
             <div
               style={{
                 fontSize: 26,
                 color: colors.textSecondary,
-                lineHeight: 1.5,
-                maxWidth: '95%',
+                lineHeight: 1.4,
+                maxWidth: '88%',
               }}
             >
-              {subtitle}
+              {subtitle.length > 120
+                ? `${subtitle.slice(0, 117)}...`
+                : subtitle}
             </div>
-          </div>
+          )}
         </div>
 
-        {/* Bottom bar with products */}
         <div
           style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            marginTop: 40,
           }}
         >
-          {/* Product tags */}
           <div
             style={{
               display: 'flex',
-              gap: 12,
-            }}
-          >
-            {['Quave ONE', 'Quave Services', 'Erva Token'].map((product) => (
-              <div
-                key={product}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 8,
-                  background: colors.bgCard,
-                  borderRadius: 8,
-                  padding: '10px 16px',
-                  fontSize: 14,
-                  color: colors.textPrimary,
-                  border: `1px solid ${colors.bgCardBorder}`,
-                }}
-              >
-                <div
-                  style={{
-                    width: 8,
-                    height: 8,
-                    borderRadius: '50%',
-                    background: colors.accent,
-                  }}
-                />
-                {product}
-              </div>
-            ))}
-          </div>
-
-          {/* CTA */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
               background: gradients.accent,
               borderRadius: 8,
-              padding: '12px 24px',
-              fontSize: 16,
+              padding: '14px 28px',
+              fontSize: 18,
               color: colors.bgPrimary,
-              fontWeight: 600,
+              fontWeight: 700,
             }}
           >
-            Learn More →
+            {cta}
           </div>
+          <div style={{ fontSize: 16, color: colors.textMuted }}>#006437</div>
         </div>
       </div>
     ),
