@@ -11,5 +11,5 @@ jobs:
       - name: Deploy
         uses: quaveone/quaveone-deploy-action@main
         with:
-          user-token: ${{ secrets.QUAVEONE_USER_TOKEN }}
+          env-token: ${{ secrets.QUAVEONE_ENV_TOKEN }}
           env: "filipenevola-filipenevola-production"
