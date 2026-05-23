@@ -2,6 +2,41 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
+// Google Fonts returns woff2 to modern UAs; Satori only renders ttf/otf/woff,
+// so we force a legacy UA to get woff/ttf.
+const LEGACY_UA =
+  'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0';
+
+async function fetchGoogleFont(family, weight) {
+  const cssUrl = `https://fonts.googleapis.com/css2?family=${encodeURIComponent(
+    family
+  )}:wght@${weight}&display=swap`;
+  const css = await fetch(cssUrl, {
+    headers: { 'User-Agent': LEGACY_UA },
+    cache: 'force-cache',
+  }).then((r) => r.text());
+  const match = css.match(/src:\s*url\(([^)]+)\)\s*format\('(?:truetype|woff)'\)/);
+  if (!match) {
+    throw new Error(`No usable font URL in Google Fonts CSS for ${family} ${weight}`);
+  }
+  const fontRes = await fetch(match[1], { cache: 'force-cache' });
+  if (!fontRes.ok) throw new Error(`Font download failed: ${fontRes.status}`);
+  return fontRes.arrayBuffer();
+}
+
+async function loadFonts() {
+  const [regular, semibold, bold] = await Promise.all([
+    fetchGoogleFont('K2D', 400),
+    fetchGoogleFont('K2D', 600),
+    fetchGoogleFont('K2D', 700),
+  ]);
+  return [
+    { name: 'K2D', data: regular, weight: 400, style: 'normal' },
+    { name: 'K2D', data: semibold, weight: 600, style: 'normal' },
+    { name: 'K2D', data: bold, weight: 700, style: 'normal' },
+  ];
+}
+
 // Personal brand colors - black/neutral/white theme
 const colors = {
   // Backgrounds (pure black and neutral grays)
@@ -67,6 +102,14 @@ export async function GET(request) {
 
   const isBlog = type === 'blog';
 
+  let fonts;
+  try {
+    fonts = await loadFonts();
+  } catch (err) {
+    console.error('[og] font load failed, falling back to default:', err);
+    fonts = undefined;
+  }
+
   // Blog OG image
   if (isBlog) {
     return new ImageResponse(
@@ -80,6 +123,7 @@ export async function GET(request) {
             backgroundColor: colors.bgPrimary,
             backgroundImage: gradients.background,
             padding: '50px 60px',
+            fontFamily: 'K2D, sans-serif',
           }}
         >
           {/* Top bar with brand and badge */}
@@ -196,7 +240,7 @@ export async function GET(request) {
           </div>
         </div>
       ),
-      { width: 1200, height: 630 }
+      { width: 1200, height: 630, fonts }
     );
   }
 
@@ -212,6 +256,7 @@ export async function GET(request) {
           backgroundColor: colors.bgPrimary,
           backgroundImage: gradients.background,
           padding: '60px',
+          fontFamily: 'K2D, sans-serif',
         }}
       >
         {/* Top bar with brand */}
@@ -379,6 +424,6 @@ export async function GET(request) {
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    { width: 1200, height: 630, fonts }
   );
 }
