@@ -1,9 +1,12 @@
 import Link from 'next/link';
 import { formatDateTime } from '@/lib/mongodb';
+import { formatBlogContent } from '@/lib/blogContent';
 import { Layout } from '@/components/layout';
 import { NewsletterCTA } from '@/components/NewsletterSubscribe';
 
 export default function PostPage({ post }) {
+  const content = formatBlogContent({ content: post.content });
+
   return (
     <Layout>
       <article className="flex flex-col w-full md:w-3/4 xl:w-1/2">
@@ -25,7 +28,7 @@ export default function PostPage({ post }) {
         )}
 
         <div className="blog-content mt-8">
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
 
         <NewsletterCTA variant="post-footer" />

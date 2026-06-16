@@ -94,6 +94,14 @@
     @apply w-full my-4 border-collapse;
   }
 
+  & .blog-table-wrapper {
+    @apply my-6 overflow-x-auto rounded-lg border border-neutral-600;
+  }
+
+  & .blog-table-wrapper table {
+    @apply my-0 min-w-[640px];
+  }
+
   & th {
     @apply border border-neutral-600 px-4 py-2 text-left;
   }
@@ -106,4 +114,3 @@
     @apply bg-neutral-800 font-medium text-white;
   }
 }
-
