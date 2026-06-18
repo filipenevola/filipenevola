@@ -1,5 +1,6 @@
 import { K2D } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { NewsletterAutoOpen } from '../components/NewsletterAutoOpen';
 import './globals.css';
 
 const font = K2D({
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
         <main>
           {children}
         </main>
+        <NewsletterAutoOpen />
       </body>
       <GoogleAnalytics gaId="G-8BJDVVE5YK" />
     </html>
