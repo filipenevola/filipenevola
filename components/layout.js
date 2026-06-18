@@ -25,6 +25,9 @@ const LayoutComponent = ({ children }) => {
           <Link href="/blog" className="underline hover:text-neutral-400 transition-colors">
             Blog
           </Link>
+          <a href="https://foroneperson.com" className="underline hover:text-neutral-400 transition-colors">
+            Book
+          </a>
           <NewsletterCTA />
           <a href="https://twitter.com/FilipeNevola" className="underline hover:text-neutral-400 transition-colors">
             Twitter

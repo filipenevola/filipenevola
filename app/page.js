@@ -50,6 +50,14 @@ export default function Home() {
             </a>
             .
           </p>
+          <p className="text-neutral-300">
+            I am also writing{' '}
+            <a href="https://foroneperson.com" className="underline text-white hover:text-neutral-400">
+              For One Person
+            </a>
+            , a living book about the mental models I use to build, decide, lead,
+            live, and protect what matters.
+          </p>
           <div className="text-neutral-300">
             <NewsletterCTA variant="inline-standalone" />
           </div>
