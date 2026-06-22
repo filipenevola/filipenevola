@@ -16,9 +16,17 @@ export default async function BlogPage() {
           >
             &larr; Back to Home
           </Link>
-          <NewsletterLink className="text-sm text-neutral-400 hover:text-white transition-colors cursor-pointer">
-            Subscribe to updates
-          </NewsletterLink>
+          <div className="flex items-center gap-4 text-sm">
+            <Link
+              href="/rss.xml"
+              className="text-neutral-400 hover:text-white transition-colors"
+            >
+              RSS
+            </Link>
+            <NewsletterLink className="text-neutral-400 hover:text-white transition-colors cursor-pointer">
+              Subscribe to updates
+            </NewsletterLink>
+          </div>
         </div>
 
         <h1 className="text-2xl font-semibold mb-4 text-white">Blog</h1>

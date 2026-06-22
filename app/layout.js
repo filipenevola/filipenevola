@@ -36,6 +36,11 @@ export const metadata = {
   icons: {
     icon: '/static/favicon.ico',
   },
+  alternates: {
+    types: {
+      'application/rss+xml': '/rss.xml',
+    },
+  },
 };
 
 export const viewport = {

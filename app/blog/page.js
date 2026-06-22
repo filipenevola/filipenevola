@@ -4,6 +4,11 @@ export const metadata = {
   title: 'Blog',
   description:
     'Thoughts on software development, entrepreneurship, and building products. By Filipe Névola.',
+  alternates: {
+    types: {
+      'application/rss+xml': '/rss.xml',
+    },
+  },
   openGraph: {
     title: 'Blog | Filipe Névola',
     description:
