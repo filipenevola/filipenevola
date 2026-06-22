@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import PostPage from './PostPage';
 import { getBlogPosts, getPost, getOriginal } from '@/lib/mongodb';
 
+export const dynamic = 'force-dynamic';
+
 export async function generateStaticParams() {
   const posts = await getBlogPosts();
   return posts.map(function mapPostToParams(post) {

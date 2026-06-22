@@ -1,6 +1,7 @@
 import { getBlogPosts, getOriginal } from '@/lib/mongodb';
 import { buildRssFeed } from '@/lib/rss';
 
+export const dynamic = 'force-dynamic';
 export const revalidate = 600;
 
 const BASE_URL = 'https://filipenevola.com';
