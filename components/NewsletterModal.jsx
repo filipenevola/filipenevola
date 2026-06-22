@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
+const SUBSTACK_URL = 'https://filipenevola.substack.com';
+const RSS_URL = 'https://filipenevola.com/rss.xml';
+
 export function NewsletterModal({ isOpen, onClose }) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
@@ -148,6 +151,26 @@ export function NewsletterModal({ isOpen, onClose }) {
             </p>
           </>
         )}
+
+        <div className="mt-5 border-t border-neutral-800 pt-4 text-center text-xs text-neutral-500">
+          Prefer another reader? Follow on{' '}
+          <a
+            href={SUBSTACK_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="text-neutral-300 underline underline-offset-2 hover:text-white transition-colors"
+          >
+            Substack
+          </a>{' '}
+          or use the{' '}
+          <a
+            href={RSS_URL}
+            className="text-neutral-300 underline underline-offset-2 hover:text-white transition-colors"
+          >
+            RSS feed
+          </a>
+          .
+        </div>
       </div>
     </div>,
     document.body
