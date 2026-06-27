@@ -21,7 +21,7 @@ const LayoutComponent = ({ children }) => {
       </header>
       <div className="flex justify-center">{children}</div>
       <footer>
-        <div className="justify-center flex gap-x-4 mt-16 text-neutral-300">
+        <div className="mt-16 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-center text-neutral-300">
           <Link href="/blog" className="underline hover:text-neutral-400 transition-colors">
             Blog
           </Link>
