@@ -61,6 +61,16 @@ const gradients = {
   accent: `linear-gradient(90deg, ${colors.accentMuted}, ${colors.textPrimary}, ${colors.accent})`,
 };
 
+// X crops large-card previews horizontally on mobile, so keep text and badges
+// inside a wider social-safe area instead of sitting near the 1200px edge.
+const OG_SAFE_PADDING = '50px 140px';
+const OG_DEFAULT_PADDING = '60px 140px';
+const OG_FRAME_STYLE = {
+  height: '100%',
+  width: '100%',
+  boxSizing: 'border-box',
+};
+
 // Default CTAs per type
 const defaultCTAs = {
   default: 'Learn More →',
@@ -116,13 +126,12 @@ export async function GET(request) {
       (
         <div
           style={{
-            height: '100%',
-            width: '100%',
+            ...OG_FRAME_STYLE,
             display: 'flex',
             flexDirection: 'column',
             backgroundColor: colors.bgPrimary,
             backgroundImage: gradients.background,
-            padding: '50px 60px',
+            padding: OG_SAFE_PADDING,
             fontFamily: 'K2D, sans-serif',
           }}
         >
@@ -249,13 +258,12 @@ export async function GET(request) {
     (
       <div
         style={{
-          height: '100%',
-          width: '100%',
+          ...OG_FRAME_STYLE,
           display: 'flex',
           flexDirection: 'column',
           backgroundColor: colors.bgPrimary,
           backgroundImage: gradients.background,
-          padding: '60px',
+          padding: OG_DEFAULT_PADDING,
           fontFamily: 'K2D, sans-serif',
         }}
       >
