@@ -61,10 +61,10 @@ const gradients = {
   accent: `linear-gradient(90deg, ${colors.accentMuted}, ${colors.textPrimary}, ${colors.accent})`,
 };
 
-// X crops large-card previews horizontally on mobile, so keep text and badges
-// inside a wider social-safe area instead of sitting near the 1200px edge.
-const OG_SAFE_PADDING = '50px 140px';
-const OG_DEFAULT_PADDING = '60px 140px';
+// X crops large-card previews horizontally and overlays the lower-left
+// corner on mobile, so keep content inside a wider social-safe area.
+const OG_SAFE_PADDING = '50px 140px 120px';
+const OG_DEFAULT_PADDING = '60px 140px 120px';
 const OG_FRAME_STYLE = {
   height: '100%',
   width: '100%',
