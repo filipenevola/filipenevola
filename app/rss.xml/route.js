@@ -1,22 +1,27 @@
 import { getBlogPosts, getOriginal } from '@/lib/mongodb';
 import { buildRssFeed } from '@/lib/rss';
-
-export const dynamic = 'force-dynamic';
-export const revalidate = 600;
+import { cacheLife } from 'next/cache';
 
 const BASE_URL = 'https://filipenevola.com';
 const FEED_DESCRIPTION =
   'Thoughts on software development, entrepreneurship, and building products. By Filipe Névola.';
 
-export async function GET() {
+async function getFeed() {
+  'use cache';
+  cacheLife({ stale: 600, revalidate: 600, expire: 86400 });
+
   const [posts, original] = await Promise.all([getBlogPosts(), getOriginal()]);
-  const feed = buildRssFeed({
+  return buildRssFeed({
     baseUrl: BASE_URL,
     title: original?.name || 'Filipe Névola Blog',
     description: original?.description || FEED_DESCRIPTION,
     language: original?.language || 'en-US',
     posts,
   });
+}
+
+export async function GET() {
+  const feed = await getFeed();
 
   return new Response(feed, {
     headers: {

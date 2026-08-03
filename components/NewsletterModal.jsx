@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useSyncExternalStore } from 'react';
 import { createPortal } from 'react-dom';
 
 const SUBSTACK_URL = 'https://filipenevola.substack.com';
@@ -10,11 +10,11 @@ export function NewsletterModal({ isOpen, onClose }) {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
   const [errorMessage, setErrorMessage] = useState('');
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const mounted = useSyncExternalStore(
+    subscribeToNothing,
+    returnTrue,
+    returnFalse
+  );
 
   useEffect(() => {
     if (isOpen) {
@@ -100,10 +100,10 @@ export function NewsletterModal({ isOpen, onClose }) {
           <div className="text-center py-4">
             <div className="text-3xl mb-4">✓</div>
             <h3 className="text-xl font-semibold text-white mb-2">
-              You're subscribed!
+              You&apos;re subscribed!
             </h3>
             <p className="text-neutral-400">
-              Thanks for subscribing. You'll receive updates on new posts and
+              Thanks for subscribing. You&apos;ll receive updates on new posts and
               insights.
             </p>
             <button
@@ -175,4 +175,16 @@ export function NewsletterModal({ isOpen, onClose }) {
     </div>,
     document.body
   );
+}
+
+function subscribeToNothing() {
+  return function unsubscribe() {};
+}
+
+function returnTrue() {
+  return true;
+}
+
+function returnFalse() {
+  return false;
 }

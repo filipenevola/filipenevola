@@ -1,21 +1,13 @@
-'use client';
-
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { NewsletterCTA } from './NewsletterSubscribe';
 
 const LayoutComponent = ({ children }) => {
-  const pathname = usePathname();
-  const isHome = pathname === '/';
-  const isBlog = pathname.startsWith('/blog');
-
   return (
     <div className="h-full my-16 mx-6 md:mx-12">
       <header>
         <div className="flex justify-center">
           <h1 className="text-xl font-semibold mb-2 text-white">
-            {isHome && <Link href="/" className="hover:text-neutral-400 transition-colors">Filipe Névola</Link>}
-            {isBlog && <Link href="/" className="hover:text-neutral-400 transition-colors">Filipe Névola</Link>}
+            <Link href="/" className="hover:text-neutral-400 transition-colors">Filipe Névola</Link>
           </h1>
         </div>
       </header>

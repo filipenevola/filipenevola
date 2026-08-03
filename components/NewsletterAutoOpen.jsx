@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import { NewsletterModal } from './NewsletterModal';
 
 function shouldOpenNewsletterModal() {
@@ -21,18 +21,25 @@ function shouldOpenNewsletterModal() {
 }
 
 export function NewsletterAutoOpen() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    if (shouldOpenNewsletterModal()) {
-      setIsModalOpen(true);
-    }
-  }, []);
+  const [isModalOpen, setIsModalOpen] = useState(null);
+  const shouldAutoOpen = useSyncExternalStore(
+    subscribeToNothing,
+    shouldOpenNewsletterModal,
+    returnFalse
+  );
 
   return (
     <NewsletterModal
-      isOpen={isModalOpen}
+      isOpen={isModalOpen ?? shouldAutoOpen}
       onClose={() => setIsModalOpen(false)}
     />
   );
+}
+
+function subscribeToNothing() {
+  return function unsubscribe() {};
+}
+
+function returnFalse() {
+  return false;
 }
