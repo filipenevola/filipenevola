@@ -14,7 +14,11 @@ const LayoutComponent = ({ children }) => {
       <div className="flex justify-center">{children}</div>
       <footer>
         <div className="mt-16 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 text-center text-neutral-300">
-          <Link href="/blog" className="underline hover:text-neutral-400 transition-colors">
+          <Link
+            href="/blog"
+            prefetch={true}
+            className="underline hover:text-neutral-400 transition-colors"
+          >
             Blog
           </Link>
           <a href="https://foroneperson.com" className="underline hover:text-neutral-400 transition-colors">

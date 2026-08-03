@@ -126,7 +126,11 @@ export default function Home() {
           </p>
           <p className="text-neutral-300">
             Read my latest articles in my{' '}
-            <Link href="/blog" className="underline text-white hover:text-neutral-400">
+            <Link
+              href="/blog"
+              prefetch={true}
+              className="underline text-white hover:text-neutral-400"
+            >
               blog
             </Link>
             .

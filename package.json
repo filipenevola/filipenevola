@@ -7,8 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test": "npm run lint && npm run build && npm run test:e2e",
-    "test:e2e": "node scripts/prepare-standalone.mjs && playwright test"
+    "test": "npm run lint && npm run build:test && npm run test:e2e",
+    "test:e2e": "node scripts/prepare-standalone.mjs && playwright test",
+    "build:test": "LEMENO_APP_URL=http://127.0.0.1:9 MONGODB_ATLAS_API_KEY=playwright-test next build"
   },
   "engines": {
     "node": ">=20.9.0"

@@ -19,6 +19,8 @@ module.exports = defineConfig({
       ...process.env,
       HOSTNAME: '127.0.0.1',
       PORT: String(PORT),
+      LEMENO_APP_URL: 'http://127.0.0.1:9',
+      MONGODB_ATLAS_API_KEY: 'playwright-test',
     },
     url: `http://127.0.0.1:${PORT}`,
     reuseExistingServer: false,
