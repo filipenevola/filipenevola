@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Layout } from '../components/layout';
 import { NewsletterCTA } from '../components/NewsletterSubscribe';
 
@@ -11,9 +12,12 @@ function BookCallout() {
       <div className="relative grid gap-6 md:grid-cols-[1fr_210px] md:items-center">
         <div className="space-y-4">
           <div className="inline-flex items-center gap-2 rounded-full border border-orange-300/30 bg-orange-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-orange-200">
-            <img
+            <Image
               src="/static/for-one-person-logo.svg"
               alt=""
+              width={16}
+              height={16}
+              unoptimized
               className="h-4 w-4"
             />
             New book
@@ -50,12 +54,12 @@ function BookCallout() {
             >
               Read the book now
             </a>
-            <a
+            <Link
               href="/?newsletter=1"
               className="inline-flex justify-center rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
             >
               Get book updates
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -64,9 +68,12 @@ function BookCallout() {
           aria-label="Read For One Person"
           className="group mx-auto block w-40 md:w-full"
         >
-          <img
+          <Image
             src="/static/for-one-person-cover.svg"
             alt="For One Person book cover"
+            width={680}
+            height={1000}
+            unoptimized
             className="w-full rounded-2xl shadow-2xl shadow-black/50 ring-1 ring-white/10 transition-transform duration-300 group-hover:-rotate-1 group-hover:scale-[1.02]"
           />
         </a>
@@ -94,7 +101,7 @@ export default function Home() {
 
         <div className="flex w-full max-w-2xl flex-col space-y-4">
           <p className="text-neutral-300">
-            I'm Filipe Névola. I'm a developer and entrepreneur focused on execution and sustainable growth.
+            I&apos;m Filipe Névola. I&apos;m a developer and entrepreneur focused on execution and sustainable growth.
           </p>
           <p className="text-neutral-300">
             Building{' '}
@@ -115,13 +122,13 @@ export default function Home() {
           <a href="https://quaveholdings.com" className="underline text-white hover:text-neutral-400">
               Quave Holdings
             </a>
-            ' CEO.
+            &apos;s CEO.
           </p>
           <p className="text-neutral-300">
             Read my latest articles in my{' '}
-            <a href="/blog" className="underline text-white hover:text-neutral-400">
+            <Link href="/blog" className="underline text-white hover:text-neutral-400">
               blog
-            </a>
+            </Link>
             .
           </p>
           <div className="text-neutral-300">
@@ -164,4 +171,3 @@ export default function Home() {
     </Layout>
   );
 }
-

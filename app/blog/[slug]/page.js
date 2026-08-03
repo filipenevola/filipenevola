@@ -1,15 +1,8 @@
+import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import PostPage from './PostPage';
-import { getBlogPosts, getPost, getOriginal } from '@/lib/mongodb';
-
-export const dynamic = 'force-dynamic';
-
-export async function generateStaticParams() {
-  const posts = await getBlogPosts();
-  return posts.map(function mapPostToParams(post) {
-    return { slug: post.slug };
-  });
-}
+import { getPost, getOriginal } from '@/lib/mongodb';
+import { Layout } from '@/components/layout';
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -63,7 +56,15 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function Page({ params }) {
+export default function Page({ params }) {
+  return (
+    <Suspense fallback={<PostLoading />}>
+      <Post params={params} />
+    </Suspense>
+  );
+}
+
+async function Post({ params }) {
   const { slug } = await params;
   const post = await getPost({ slug });
 
@@ -72,4 +73,24 @@ export default async function Page({ params }) {
   }
 
   return <PostPage post={post} />;
+}
+
+function PostLoading() {
+  return (
+    <Layout>
+      <article
+        className="flex w-full max-w-3xl flex-col"
+        aria-label="Loading blog post"
+      >
+        <div className="mb-8 h-6 w-36 animate-pulse rounded bg-neutral-800" />
+        <div className="mb-4 h-10 w-4/5 animate-pulse rounded bg-neutral-800" />
+        <div className="mb-10 h-5 w-32 animate-pulse rounded bg-neutral-900" />
+        <div className="space-y-4">
+          <div className="h-5 w-full animate-pulse rounded bg-neutral-900" />
+          <div className="h-5 w-11/12 animate-pulse rounded bg-neutral-900" />
+          <div className="h-5 w-3/4 animate-pulse rounded bg-neutral-900" />
+        </div>
+      </article>
+    </Layout>
+  );
 }

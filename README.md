@@ -17,11 +17,11 @@ Learn how to code at [codeftw.dev](https://codeftw.dev) (Portuguese) and [aiproo
 
 ## Development
 
-Personal website built with **Next.js 15** (App Router) and **Tailwind CSS**.
+Personal website built with **Next.js 16.3** (App Router) and **Tailwind CSS**.
 
 ### Requirements
 
-- Node.js >= 18.18.0
+- Node.js >= 20.9.0
 
 ### Getting Started
 
@@ -44,6 +44,16 @@ npm run build
 # Start production server
 npm start
 ```
+
+### Test
+
+```bash
+# ESLint, production build, and desktop/mobile browser tests
+npm test
+```
+
+See [`docs/next-16-3-migration.md`](docs/next-16-3-migration.md) for the
+migration decisions and the checklist to reuse in other repositories.
 
 ### Docker
 
