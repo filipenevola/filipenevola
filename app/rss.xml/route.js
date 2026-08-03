@@ -1,6 +1,7 @@
 import { getBlogPosts, getOriginal } from '@/lib/mongodb';
 import { buildRssFeed } from '@/lib/rss';
 import { cacheLife } from 'next/cache';
+import { connection } from 'next/server';
 
 const BASE_URL = 'https://filipenevola.com';
 const FEED_DESCRIPTION =
@@ -21,6 +22,7 @@ async function getFeed() {
 }
 
 export async function GET() {
+  await connection();
   const feed = await getFeed();
 
   return new Response(feed, {

@@ -23,7 +23,8 @@ changes and checks here are intended to inform later repository migrations.
 - Removed `usePathname()` from the shared layout because identical markup was
   rendered for every page; this keeps the layout prerenderable.
 - Migrated the RSS route from `dynamic`/`revalidate` segment exports to an
-  explicit cached helper.
+  explicit cached helper, with `connection()` keeping runtime-only deployment
+  credentials out of prerendering.
 - Added ESLint flat config because `next build` does not run lint checks.
 - Added desktop and mobile Playwright coverage, including the 16.3 `instant()`
   navigation helper.
@@ -55,6 +56,9 @@ changes and checks here are intended to inform later repository migrations.
    advisory.
 10. Exercise dynamic image routes concurrently. For Node.js `ImageResponse`,
    prefer traced local TTF/OTF assets over remote WOFF downloads.
+11. A cached Route Handler can still be prerendered with empty build-time data.
+    Use `connection()` when its data or credentials only exist at runtime, and
+    make the test fixture assert meaningful records rather than only a 200.
 
 ## Verification command
 

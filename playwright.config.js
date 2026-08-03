@@ -13,19 +13,27 @@ module.exports = defineConfig({
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
   },
-  webServer: {
-    command: 'node .next/standalone/server.js',
-    env: {
-      ...process.env,
-      HOSTNAME: '127.0.0.1',
-      PORT: String(PORT),
-      LEMENO_APP_URL: 'http://127.0.0.1:9',
-      MONGODB_ATLAS_API_KEY: 'playwright-test',
+  webServer: [
+    {
+      command: 'node scripts/mock-cms.mjs',
+      port: 4199,
+      reuseExistingServer: false,
+      timeout: 30_000,
     },
-    url: `http://127.0.0.1:${PORT}`,
-    reuseExistingServer: false,
-    timeout: 30_000,
-  },
+    {
+      command: 'node .next/standalone/server.js',
+      env: {
+        ...process.env,
+        HOSTNAME: '127.0.0.1',
+        PORT: String(PORT),
+        LEMENO_APP_URL: 'http://127.0.0.1:4199',
+        MONGODB_ATLAS_API_KEY: 'playwright-test',
+      },
+      url: `http://127.0.0.1:${PORT}`,
+      reuseExistingServer: false,
+      timeout: 30_000,
+    },
+  ],
   projects: [
     {
       name: 'desktop-chromium',
