@@ -30,11 +30,24 @@ test('keeps the blog shell instant during client navigation', async ({ page }) =
   });
 });
 
+test('streams a CMS post into the blog and opens it', async ({ page }) => {
+  await page.goto('/blog');
+
+  await page.getByRole('link', { name: 'Migration Test Post' }).click();
+  await expect(
+    page.getByRole('heading', { name: 'Migration Test Post' })
+  ).toBeVisible();
+  await expect(page.getByText('deterministic test article')).toBeVisible();
+});
+
 test('serves RSS and Open Graph image endpoints', async ({ request }) => {
   const rss = await request.get('/rss.xml');
   expect(rss.ok()).toBeTruthy();
   expect(rss.headers()['content-type']).toContain('application/rss+xml');
-  expect(await rss.text()).toContain('<rss version="2.0"');
+  const rssText = await rss.text();
+  expect(rssText).toContain('<rss version="2.0"');
+  expect(rssText).toContain('<item>');
+  expect(rssText).toContain('Migration Test Post');
 
   const og = await request.get('/api/og?title=Migration%20test');
   expect(og.ok()).toBeTruthy();
