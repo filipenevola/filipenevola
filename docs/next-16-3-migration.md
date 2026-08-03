@@ -12,6 +12,8 @@ changes and checks here are intended to inform later repository migrations.
   `cacheLife`.
 - Added a static blog shell with a Suspense boundary around CMS data so the
   route can navigate instantly while posts stream in.
+- Opted the main blog links into `prefetch={true}` so Partial Prefetching sends
+  the page shell before navigation, including when CMS data is dynamic.
 - Removed `generateStaticParams` from the dynamic CMS-backed post route. Cache
   Components requires it to return at least one path during every build, which
   is not reliable when build-time CMS credentials are intentionally absent.
@@ -36,19 +38,22 @@ changes and checks here are intended to inform later repository migrations.
 3. Short-lived cached data should sit behind the smallest useful Suspense
    boundary. Keep headings and navigation outside it to produce a useful,
    testable instant shell.
-4. A cached helper must have deterministic arguments and must not capture
+4. A Suspense shell is not automatically proof of an instant navigation. Test
+   with production-like dynamic data and opt important entry links into
+   `prefetch={true}` when the default prefetch does not include the page shell.
+5. A cached helper must have deterministic arguments and must not capture
    mutable module state. Normalize complex arguments before crossing the cache
    boundary.
-5. Cache Components does not support the Edge runtime. Inventory `runtime =
+6. Cache Components does not support the Edge runtime. Inventory `runtime =
    'edge'` before enabling it and verify that each route can move to Node.js.
-6. `generateStaticParams()` cannot return an empty array with Cache Components.
+7. `generateStaticParams()` cannot return an empty array with Cache Components.
    Remove it for fully dynamic routes or guarantee a real build-time path.
-7. Test the standalone production server, not only `next dev`, because partial
+8. Test the standalone production server, not only `next dev`, because partial
    prefetching and the `instant()` helper exercise production behavior.
-8. Audit production dependencies after the upgrade. This migration also moved
+9. Audit production dependencies after the upgrade. This migration also moved
    `sharp` to 0.35 because the older direct dependency had a high-severity
    advisory.
-9. Exercise dynamic image routes concurrently. For Node.js `ImageResponse`,
+10. Exercise dynamic image routes concurrently. For Node.js `ImageResponse`,
    prefer traced local TTF/OTF assets over remote WOFF downloads.
 
 ## Verification command
