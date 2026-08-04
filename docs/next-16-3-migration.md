@@ -32,6 +32,11 @@ changes and checks here are intended to inform later repository migrations.
 
 ## Important lessons for the next repositories
 
+- Runtime-only CMS credentials must be read after `connection()`. Do not put
+  these reads behind a build-persisted `use cache` boundary: an empty build-time
+  result can otherwise become the PPR response. RSS uses HTTP `Cache-Control`
+  for edge caching instead.
+
 1. Upgrade dependencies and get a clean baseline build before enabling the
    Instant Navigation flags.
 2. `cacheComponents: true` rejects route segment exports such as `dynamic` and
