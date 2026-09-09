@@ -1,11 +1,11 @@
-import { K2D } from 'next/font/google';
+import localFont from 'next/font/local';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { NewsletterAutoOpen } from '../components/NewsletterAutoOpen';
 import './globals.css';
 
-const font = K2D({
-  weight: '400',
-  subsets: ['latin'],
+const font = localFont({
+  src: '../assets/fonts/K2D-Regular.ttf',
+  display: 'swap',
 });
 
 export const metadata = {
