@@ -1,11 +1,19 @@
-import { K2D } from 'next/font/google';
+import localFont from 'next/font/local';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { NewsletterAutoOpen } from '../components/NewsletterAutoOpen';
 import './globals.css';
 
-const font = K2D({
+// Latin-subset WOFF2 of K2D-Regular.ttf (SIL OFL, see assets/fonts/OFL.txt),
+// matching the former next/font/google K2D 400 latin download. The full TTFs
+// stay for the OG image route. Regenerate with fonttools:
+//   pyftsubset assets/fonts/K2D-Regular.ttf --flavor=woff2 --layout-features='*' \
+//     --unicodes='U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD' \
+//     --output-file=assets/fonts/K2D-Regular-latin.woff2
+const font = localFont({
+  src: '../assets/fonts/K2D-Regular-latin.woff2',
   weight: '400',
-  subsets: ['latin'],
+  style: 'normal',
+  display: 'swap',
 });
 
 export const metadata = {
