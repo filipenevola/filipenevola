@@ -42,7 +42,12 @@ export const metadata = {
     images: ['/api/og'],
   },
   icons: {
-    icon: '/static/favicon.ico',
+    icon: [
+      { url: '/static/favicon.ico', sizes: '16x16 32x32 48x48' },
+      { url: '/static/icon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/static/icon-512.png', type: 'image/png', sizes: '512x512' },
+    ],
+    apple: '/static/apple-touch-icon.png',
   },
   alternates: {
     types: {
