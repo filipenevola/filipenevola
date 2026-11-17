@@ -11,7 +11,7 @@ export default function PostPage({ post }) {
     <Layout>
       <article className="flex flex-col w-full md:w-3/4 xl:w-1/2">
         <Link
-          className="flex items-center gap-2 text-white hover:text-neutral-400 transition-colors mb-8"
+          className="flex items-center gap-2 text-white hover:text-[#ffd400] transition-colors mb-8"
           href="/blog"
         >
           &larr; Back to Blog
