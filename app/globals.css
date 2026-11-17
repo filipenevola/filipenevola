@@ -51,7 +51,7 @@
   }
 
   & a {
-    @apply text-white hover:text-neutral-400 underline;
+    @apply text-white hover:text-[#ffd400] underline decoration-[#ffd400]/60;
   }
 
   & ul {

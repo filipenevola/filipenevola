@@ -10,7 +10,7 @@ export function NewsletterLink({ children, className }) {
     <>
       <button
         onClick={() => setIsModalOpen(true)}
-        className={className || 'underline text-white hover:text-neutral-400 transition-colors cursor-pointer'}
+        className={className || 'underline text-white hover:text-[#ffd400] transition-colors cursor-pointer'}
       >
         {children || 'Subscribe'}
       </button>
@@ -56,7 +56,7 @@ export function NewsletterCTA({ variant = 'default' }) {
           {' · '}
           <button
             onClick={() => setIsModalOpen(true)}
-            className="text-white hover:text-neutral-400 transition-colors underline cursor-pointer"
+            className="text-white hover:text-[#ffd400] transition-colors underline cursor-pointer"
           >
             (subscribe)
           </button>
@@ -74,7 +74,7 @@ export function NewsletterCTA({ variant = 'default' }) {
       <>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="text-white hover:text-neutral-400 transition-colors underline cursor-pointer"
+          className="text-white hover:text-[#ffd400] transition-colors underline cursor-pointer"
         >
           Get updates via newsletter
         </button>

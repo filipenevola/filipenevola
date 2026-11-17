@@ -7,7 +7,9 @@ const LayoutComponent = ({ children }) => {
       <header>
         <div className="flex justify-center">
           <h1 className="text-xl font-semibold mb-2 text-white">
-            <Link href="/" className="hover:text-neutral-400 transition-colors">Filipe Névola</Link>
+            <Link href="/" className="hover:text-[#ffd400] transition-colors">
+              Filipe Névola<span className="text-[#ffd400]">.</span>
+            </Link>
           </h1>
         </div>
       </header>
@@ -17,21 +19,24 @@ const LayoutComponent = ({ children }) => {
           <Link
             href="/blog"
             prefetch={true}
-            className="underline hover:text-neutral-400 transition-colors"
+            className="underline hover:text-[#ffd400] transition-colors"
           >
             Blog
           </Link>
-          <a href="https://foroneperson.com" className="underline hover:text-neutral-400 transition-colors">
+          <a href="https://foroneperson.com" className="underline hover:text-[#ffd400] transition-colors">
             Book
           </a>
           <NewsletterCTA />
-          <a href="https://twitter.com/FilipeNevola" className="underline hover:text-neutral-400 transition-colors">
+          <a href="https://www.youtube.com/@filipenevola" className="underline hover:text-[#ffd400] transition-colors">
+            YouTube
+          </a>
+          <a href="https://twitter.com/FilipeNevola" className="underline hover:text-[#ffd400] transition-colors">
             Twitter
           </a>
-          <a href="https://instagram.com/FilipeNevola" className="underline hover:text-neutral-400 transition-colors">
+          <a href="https://instagram.com/FilipeNevola" className="underline hover:text-[#ffd400] transition-colors">
             Instagram
           </a>
-          <a href="https://linkedin.com/in/FilipeNevola" className="underline hover:text-neutral-400 transition-colors">
+          <a href="https://linkedin.com/in/FilipeNevola" className="underline hover:text-[#ffd400] transition-colors">
             LinkedIn
           </a>
         </div>

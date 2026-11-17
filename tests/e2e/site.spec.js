@@ -6,8 +6,14 @@ test('renders the home page and newsletter entry point', async ({ page }) => {
 
   await expect(page).toHaveTitle(/Filipe Névola/);
   await expect(
+    page.getByRole('heading', { name: 'one idea.' })
+  ).toBeVisible();
+  await expect(
     page.getByRole('heading', { name: 'For One Person' })
   ).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: 'YouTube', exact: true })
+  ).toHaveAttribute('href', 'https://www.youtube.com/@filipenevola');
   await expect(page.getByAltText('Filipe Névola')).toBeVisible();
 
   await page.goto('/?newsletter=1');

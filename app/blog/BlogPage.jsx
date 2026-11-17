@@ -11,7 +11,7 @@ export default function BlogPage() {
         <div className="mb-8 flex justify-between items-center">
           <Link
             href="/"
-            className="text-white hover:text-neutral-400 transition-colors"
+            className="text-white hover:text-[#ffd400] transition-colors"
           >
             &larr; Back to Home
           </Link>
@@ -64,7 +64,7 @@ async function BlogPosts() {
               {formatDateTime(publishedAt)}
             </small>
             <Link
-              className="text-lg text-white hover:text-neutral-400 transition-colors"
+              className="text-lg text-white hover:text-[#ffd400] transition-colors"
               href={`/blog/${slug}`}
             >
               {subject}

@@ -6,6 +6,8 @@ Learn how to code at [codeftw.dev](https://codeftw.dev) (Portuguese) and [aiproo
 
 [![Twitter](https://img.shields.io/twitter/follow/FilipeNevola?style=social)](https://twitter.com/FilipeNevola)
 
+[YouTube](https://www.youtube.com/@filipenevola) - One Idea: one book, one podcast, one conversation, one idea
+
 [Instagram](https://www.instagram.com/filipenevola/) - Business & Personal Life (most in Portuguese)
 
 [![Linkedin: FilipeNevola](https://img.shields.io/badge/-Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/FilipeNevola/)](https://www.linkedin.com/in/FilipeNevola/)
