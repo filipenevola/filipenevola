@@ -2,7 +2,7 @@
 
 I'm Filipe Névola, and I'm Quave's CEO, Developer & Instructor trying to be better every day.
 
-Learn how to code at [codeftw.dev](https://codeftw.dev) (Portuguese) and [aiproofdev.com](https://aiproofdev.com) (English)
+Learn how to code with CodeFTW on YouTube: [Portuguese](https://www.youtube.com/@CodeFTWDev) and [English](https://www.youtube.com/@EnCodeFTWDev)
 
 [![Twitter](https://img.shields.io/twitter/follow/FilipeNevola?style=social)](https://twitter.com/FilipeNevola)
 
